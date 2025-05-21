@@ -5,8 +5,11 @@ set -o errexit
 # Install Python dependencies
 pip install -r requirements.txt
 
-# Collect static files
-python manage.py collectstatic --no-input
+# Make migrations
+python manage.py makemigrations
 
 # Run migrations
-python manage.py migrate 
+python manage.py migrate
+
+# Collect static files
+python manage.py collectstatic --no-input 
