@@ -127,13 +127,8 @@ class NationalLeadershipSerializer(serializers.ModelSerializer):
             public_id = str(obj.image)
             if '/' in public_id:
                 public_id = public_id.split('/')[-1]  # Get just the filename
-            cloudinary_url = cloudinary.CloudinaryImage(f"leadership/{public_id}").build_url(
-                version="auto",
-                format="auto",
-                quality="auto"
-            )
-            print(f"Cloudinary URL for {obj.name}: {cloudinary_url}")  # Debug log
-            return cloudinary_url
+            # Construct the URL manually to ensure correct format
+            return f"https://res.cloudinary.com/{settings.CLOUDINARY_STORAGE['CLOUD_NAME']}/image/upload/leadership/{public_id}"
         except Exception as e:
             print(f"Error generating Cloudinary URL for {obj.name}: {str(e)}")  # Debug log
             # Fallback to local media URL if Cloudinary URL can't be generated
