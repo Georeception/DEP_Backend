@@ -9,6 +9,7 @@ from .models import (
 )
 from .models.locations import County, Constituency, Ward
 from django.conf import settings
+import cloudinary
 
 # User Serializers
 class UserRegistrationSerializer(serializers.ModelSerializer):
@@ -113,14 +114,20 @@ class NationalLeadershipSerializer(serializers.ModelSerializer):
     def get_image(self, obj):
         if not obj.image:
             return None
-        # If the image is already a Cloudinary URL (starts with 'v'), return it as is
-        if str(obj.image).startswith('v'):
-            return f"https://res.cloudinary.com/{settings.CLOUDINARY_STORAGE['CLOUD_NAME']}/image/upload/{obj.image}"
         # If it's a full URL, return it as is
         if str(obj.image).startswith('http'):
             return str(obj.image)
-        # Otherwise, construct the Cloudinary URL
-        return f"https://res.cloudinary.com/{settings.CLOUDINARY_STORAGE['CLOUD_NAME']}/image/upload/{obj.image}"
+        # If it's a Cloudinary public_id (starts with 'v'), return the full URL
+        if str(obj.image).startswith('v'):
+            return f"https://res.cloudinary.com/{settings.CLOUDINARY_STORAGE['CLOUD_NAME']}/image/upload/{obj.image}"
+        # If it's a local path, try to get the Cloudinary URL
+        try:
+            # Get the Cloudinary URL for the image
+            cloudinary_url = cloudinary.CloudinaryImage(str(obj.image)).build_url()
+            return cloudinary_url
+        except:
+            # Fallback to local media URL if Cloudinary URL can't be generated
+            return f"{settings.MEDIA_URL}{obj.image}"
 
 # Donation Serializers
 class DonationSerializer(serializers.ModelSerializer):
