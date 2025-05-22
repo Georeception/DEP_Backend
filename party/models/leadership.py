@@ -41,18 +41,17 @@ class NationalLeadership(models.Model):
     def save(self, *args, **kwargs):
         if self.image and not str(self.image).startswith('v'):
             try:
-                # Get the local file path
-                local_path = self.image.path
-                if os.path.exists(local_path):
-                    # Upload to Cloudinary
-                    result = cloudinary.uploader.upload(
-                        local_path,
-                        folder="leadership",
-                        resource_type="image"
-                    )
-                    print(f"Cloudinary upload result: {result}")
-                    # Update the image field with Cloudinary version
-                    self.image = result['version'] + '/' + result['public_id']
+                # Get the file object directly
+                file_obj = self.image.file
+                # Upload to Cloudinary using the file object
+                result = cloudinary.uploader.upload(
+                    file_obj,
+                    folder="leadership",
+                    resource_type="image"
+                )
+                print(f"Cloudinary upload result: {result}")
+                # Update the image field with Cloudinary version
+                self.image = result['version'] + '/' + result['public_id']
             except Exception as e:
                 print(f"Error uploading to Cloudinary: {str(e)}")
         super().save(*args, **kwargs)
