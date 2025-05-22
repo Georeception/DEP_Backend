@@ -174,13 +174,13 @@ SIMPLE_JWT = {
 CORS_ALLOWED_ORIGINS = [
     "https://dep-party.onrender.com",
     "https://dep-party.com",
-    "http://localhost:3000",  # Add localhost for development
+    "http://localhost:3000",
 ]
 
 CORS_ALLOW_CREDENTIALS = True
 
-# Add these additional CORS settings for better compatibility
-CORS_ALLOW_ALL_ORIGINS = False  # Keep this False for security
+# Add these additional CORS settings
+CORS_ALLOW_ALL_ORIGINS = False
 CORS_ALLOW_METHODS = [
     'DELETE',
     'GET',
@@ -201,6 +201,10 @@ CORS_ALLOW_HEADERS = [
     'x-csrftoken',
     'x-requested-with',
 ]
+
+# Additional CORS settings
+CORS_EXPOSE_HEADERS = ['Content-Type', 'X-CSRFToken']
+CORS_PREFLIGHT_MAX_AGE = 86400  # 24 hours
 
 # Security Settings
 if not DEBUG:
