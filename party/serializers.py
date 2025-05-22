@@ -8,6 +8,7 @@ from .models import (
     MembershipPlan, Membership
 )
 from .models.locations import County, Constituency, Ward
+from django.conf import settings
 
 # User Serializers
 class UserRegistrationSerializer(serializers.ModelSerializer):
@@ -103,10 +104,23 @@ class LeadershipPositionSerializer(serializers.ModelSerializer):
 
 class NationalLeadershipSerializer(serializers.ModelSerializer):
     position = LeadershipPositionSerializer(read_only=True)
+    image = serializers.SerializerMethodField()
     
     class Meta:
         model = NationalLeadership
         fields = ['id', 'name', 'position', 'bio', 'image', 'start_date', 'end_date', 'is_active']
+    
+    def get_image(self, obj):
+        if not obj.image:
+            return None
+        # If the image is already a Cloudinary URL (starts with 'v'), return it as is
+        if str(obj.image).startswith('v'):
+            return f"https://res.cloudinary.com/{settings.CLOUDINARY_STORAGE['CLOUD_NAME']}/image/upload/{obj.image}"
+        # If it's a full URL, return it as is
+        if str(obj.image).startswith('http'):
+            return str(obj.image)
+        # Otherwise, construct the Cloudinary URL
+        return f"https://res.cloudinary.com/{settings.CLOUDINARY_STORAGE['CLOUD_NAME']}/image/upload/{obj.image}"
 
 # Donation Serializers
 class DonationSerializer(serializers.ModelSerializer):
