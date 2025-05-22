@@ -31,6 +31,7 @@ from party.views.views import (
     ConstituencyViewSet, WardViewSet
 )
 from party.views.newsletter import subscribe, verify_subscription, unsubscribe
+from django.views.static import serve
 
 router = DefaultRouter()
 router.register(r'news', NewsViewSet)
@@ -64,4 +65,13 @@ urlpatterns = [
     path('api/newsletter/subscribe/', subscribe, name='newsletter-subscribe'),
     path('api/newsletter/verify/<str:token>/', verify_subscription, name='newsletter-verify'),
     path('api/newsletter/unsubscribe/', unsubscribe, name='newsletter-unsubscribe'),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
+
+# Serve media files in development
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+else:
+    # In production, serve media files through whitenoise
+    urlpatterns += [
+        path('media/<path:path>', serve, {'document_root': settings.MEDIA_ROOT}),
+    ]
