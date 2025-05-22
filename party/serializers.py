@@ -123,9 +123,16 @@ class NationalLeadershipSerializer(serializers.ModelSerializer):
         # If it's a local path, try to get the Cloudinary URL
         try:
             # Get the Cloudinary URL for the image
-            cloudinary_url = cloudinary.CloudinaryImage(str(obj.image)).build_url()
+            cloudinary_url = cloudinary.CloudinaryImage(str(obj.image)).build_url(
+                version="auto",
+                format="auto",
+                quality="auto",
+                fetch_format="auto"
+            )
+            print(f"Cloudinary URL for {obj.name}: {cloudinary_url}")  # Debug log
             return cloudinary_url
-        except:
+        except Exception as e:
+            print(f"Error generating Cloudinary URL for {obj.name}: {str(e)}")  # Debug log
             # Fallback to local media URL if Cloudinary URL can't be generated
             return f"{settings.MEDIA_URL}{obj.image}"
 

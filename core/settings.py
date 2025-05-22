@@ -14,6 +14,7 @@ from pathlib import Path
 import os
 from datetime import timedelta
 from dotenv import load_dotenv
+import cloudinary
 
 # Load environment variables
 load_dotenv()
@@ -302,10 +303,24 @@ ADMIN_EMAIL = os.getenv('ADMIN_EMAIL')
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Cloudinary settings
+cloudinary.config(
+    cloud_name=os.getenv('CLOUDINARY_CLOUD_NAME'),
+    api_key=os.getenv('CLOUDINARY_API_KEY'),
+    api_secret=os.getenv('CLOUDINARY_API_SECRET'),
+    secure=True
+)
+
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': os.getenv('CLOUDINARY_CLOUD_NAME'),
     'API_KEY': os.getenv('CLOUDINARY_API_KEY'),
-    'API_SECRET': os.getenv('CLOUDINARY_API_SECRET')
+    'API_SECRET': os.getenv('CLOUDINARY_API_SECRET'),
+    'STATIC_TAG': 'static',
+    'MEDIA_TAG': 'media',
+    'INVALID_VIDEO_ERROR_MESSAGE': 'Please upload a valid video file.',
+    'STATIC_IMAGES_EXTENSIONS': ['jpg', 'jpe', 'jpeg', 'jpc', 'jp2', 'j2k', 'wdp', 'jxr', 
+                                'hdp', 'png', 'gif', 'bmp', 'tif', 'tiff', 'ico'],
+    'MAGIC_FILE_PATH': 'magic',
+    'STATICFILES_MANIFEST_ROOT': os.path.join(BASE_DIR, 'manifest'),
 }
 
 # Media files configuration
