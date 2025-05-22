@@ -50,7 +50,6 @@ INSTALLED_APPS = [
     'froala_editor',
     'rest_framework_simplejwt',
     'cloudinary_storage',
-    'django.contrib.staticfiles.storage.ManifestStaticFilesStorage',
     
     # Local app
     'party',
