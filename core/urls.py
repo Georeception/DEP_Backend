@@ -67,11 +67,5 @@ urlpatterns = [
     path('api/newsletter/unsubscribe/', unsubscribe, name='newsletter-unsubscribe'),
 ]
 
-# Serve media files in development
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-else:
-    # In production, serve media files through whitenoise
-    urlpatterns += [
-        path('media/<path:path>', serve, {'document_root': settings.MEDIA_ROOT}),
-    ]
+# Serve media files in both development and production
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

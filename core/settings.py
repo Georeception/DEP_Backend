@@ -157,6 +157,11 @@ if not DEBUG:
     MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
     WHITENOISE_MEDIA_PREFIX = '/media/'
     WHITENOISE_MEDIA_ROOT = MEDIA_ROOT
+    
+    # Add this to allow serving media files
+    WHITENOISE_USE_FINDERS = True
+    WHITENOISE_MANIFEST_STRICT = False
+    WHITENOISE_ALLOW_ALL_ORIGINS = True
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
