@@ -3,6 +3,7 @@ from django.utils.text import slugify
 from .user import User
 import cloudinary
 from django.conf import settings
+from cloudinary_storage.storage import MediaCloudinaryStorage
 
 class ProductCategory(models.Model):
     name = models.CharField(max_length=100)
@@ -27,7 +28,7 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     price_modifier_type = models.CharField(max_length=10, choices=[('multiply', 'Multiply'), ('add', 'Add')], default='multiply')
     price_modifier_value = models.DecimalField(max_digits=10, decimal_places=2, default=1.0)
-    image = models.ImageField(upload_to='products/')
+    image = models.ImageField(upload_to='products/', storage=MediaCloudinaryStorage())
     category = models.ForeignKey(ProductCategory, on_delete=models.CASCADE)
     stock = models.IntegerField(default=0)
     is_featured = models.BooleanField(default=False)
@@ -44,18 +45,7 @@ class Product(models.Model):
             return None
         if str(self.image).startswith('v'):
             return f"https://res.cloudinary.com/{settings.CLOUDINARY_STORAGE['CLOUD_NAME']}/image/upload/{self.image}"
-        try:
-            public_id = str(self.image)
-            if public_id.startswith('products/'):
-                cloudinary_path = public_id
-            else:
-                filename = public_id.split('/')[-1]
-                cloudinary_path = f"products/{filename}"
-            result = cloudinary.uploader.explicit(cloudinary_path, type="upload")
-            return result['secure_url']
-        except Exception as e:
-            print(f"Error getting Cloudinary URL for product image: {str(e)}")
-            return f"{settings.MEDIA_URL}{self.image}"
+        return self.image.url if self.image else None
 
     def calculate_original_price(self):
         if self.price_modifier_type == 'multiply':
