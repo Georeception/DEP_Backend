@@ -15,6 +15,8 @@ import os
 from datetime import timedelta
 from dotenv import load_dotenv
 import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
 # Load environment variables
 load_dotenv()

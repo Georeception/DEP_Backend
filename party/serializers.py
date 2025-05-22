@@ -125,12 +125,30 @@ class NationalLeadershipSerializer(serializers.ModelSerializer):
             # Get the Cloudinary URL for the image
             # The public_id should be the path without the version number
             public_id = str(obj.image)
-            if '/' in public_id:
-                public_id = public_id.split('/')[-1]  # Get just the filename
-            # Construct the URL manually to ensure correct format
-            return f"https://res.cloudinary.com/{settings.CLOUDINARY_STORAGE['CLOUD_NAME']}/image/upload/leadership/{public_id}"
+            print(f"Original image path: {public_id}")  # Debug log
+            
+            # Handle different path formats
+            if public_id.startswith('leadership/'):
+                # Path already includes leadership folder
+                cloudinary_path = public_id
+            else:
+                # Extract filename and add leadership folder
+                filename = public_id.split('/')[-1]
+                cloudinary_path = f"leadership/{filename}"
+            
+            print(f"Cloudinary path: {cloudinary_path}")  # Debug log
+            
+            # Try to get the image from Cloudinary
+            try:
+                result = cloudinary.uploader.explicit(cloudinary_path, type="upload")
+                print(f"Cloudinary result: {result}")  # Debug log
+                return result['secure_url']
+            except Exception as e:
+                print(f"Error getting Cloudinary URL: {str(e)}")  # Debug log
+                # Fallback to basic URL
+                return f"https://res.cloudinary.com/{settings.CLOUDINARY_STORAGE['CLOUD_NAME']}/image/upload/{cloudinary_path}"
         except Exception as e:
-            print(f"Error generating Cloudinary URL for {obj.name}: {str(e)}")  # Debug log
+            print(f"Error in get_image for {obj.name}: {str(e)}")  # Debug log
             # Fallback to local media URL if Cloudinary URL can't be generated
             return f"{settings.MEDIA_URL}{obj.image}"
 
