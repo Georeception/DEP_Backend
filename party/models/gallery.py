@@ -1,5 +1,7 @@
 from django.db import models
 from .user import User
+import cloudinary
+from django.conf import settings
 
 class GalleryCategory(models.Model):
     name = models.CharField(max_length=100)
@@ -31,17 +33,40 @@ class Gallery(models.Model):
     is_featured = models.BooleanField(default=False)
 
     def get_image_url(self):
-        if self.image and str(self.image).startswith('v'):
-            return f"https://res.cloudinary.com/dgkommeq9/image/upload/{self.image}"
-        return self.image.url if self.image else None
+        if not self.image:
+            return None
+        if str(self.image).startswith('v'):
+            return f"https://res.cloudinary.com/{settings.CLOUDINARY_STORAGE['CLOUD_NAME']}/image/upload/{self.image}"
+        try:
+            public_id = str(self.image)
+            if public_id.startswith('gallery/images/'):
+                cloudinary_path = public_id
+            else:
+                filename = public_id.split('/')[-1]
+                cloudinary_path = f"gallery/images/{filename}"
+            result = cloudinary.uploader.explicit(cloudinary_path, type="upload")
+            return result['secure_url']
+        except Exception as e:
+            print(f"Error getting Cloudinary URL for image: {str(e)}")
+            return f"{settings.MEDIA_URL}{self.image}"
 
     def get_thumbnail_url(self):
-        if self.thumbnail and str(self.thumbnail).startswith('v'):
-            return f"https://res.cloudinary.com/dgkommeq9/image/upload/{self.thumbnail}"
-        return self.thumbnail.url if self.thumbnail else None
-
-    def __str__(self):
-        return self.title
+        if not self.thumbnail:
+            return None
+        if str(self.thumbnail).startswith('v'):
+            return f"https://res.cloudinary.com/{settings.CLOUDINARY_STORAGE['CLOUD_NAME']}/image/upload/{self.thumbnail}"
+        try:
+            public_id = str(self.thumbnail)
+            if public_id.startswith('gallery/thumbnails/'):
+                cloudinary_path = public_id
+            else:
+                filename = public_id.split('/')[-1]
+                cloudinary_path = f"gallery/thumbnails/{filename}"
+            result = cloudinary.uploader.explicit(cloudinary_path, type="upload")
+            return result['secure_url']
+        except Exception as e:
+            print(f"Error getting Cloudinary URL for thumbnail: {str(e)}")
+            return f"{settings.MEDIA_URL}{self.thumbnail}"
 
     def clean(self):
         from django.core.exceptions import ValidationError
@@ -49,6 +74,9 @@ class Gallery(models.Model):
             raise ValidationError('Image is required for image type media')
         if self.media_type == 'video' and not self.video:
             raise ValidationError('Video is required for video type media')
+
+    def __str__(self):
+        return self.title
 
     class Meta:
         verbose_name_plural = "Gallery"

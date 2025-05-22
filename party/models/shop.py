@@ -1,6 +1,8 @@
 from django.db import models
 from django.utils.text import slugify
 from .user import User
+import cloudinary
+from django.conf import settings
 
 class ProductCategory(models.Model):
     name = models.CharField(max_length=100)
@@ -23,22 +25,8 @@ class Product(models.Model):
     slug = models.SlugField(unique=True)
     description = models.TextField()
     price = models.DecimalField(max_digits=10, decimal_places=2)
-    original_price = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
-    price_modifier_type = models.CharField(
-        max_length=20,
-        choices=[
-            ('none', 'None'),
-            ('multiply', 'Multiply'),
-            ('add', 'Add')
-        ],
-        default='none'
-    )
-    price_modifier_value = models.DecimalField(
-        max_digits=10,
-        decimal_places=2,
-        default=0,
-        help_text='Value to multiply or add to the base price'
-    )
+    price_modifier_type = models.CharField(max_length=10, choices=[('multiply', 'Multiply'), ('add', 'Add')], default='multiply')
+    price_modifier_value = models.DecimalField(max_digits=10, decimal_places=2, default=1.0)
     image = models.ImageField(upload_to='products/')
     category = models.ForeignKey(ProductCategory, on_delete=models.CASCADE)
     stock = models.IntegerField(default=0)
@@ -46,24 +34,39 @@ class Product(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-    def calculate_original_price(self):
-        if self.price_modifier_type == 'multiply' and self.price_modifier_value > 0:
-            return self.price * self.price_modifier_value
-        elif self.price_modifier_type == 'add' and self.price_modifier_value > 0:
-            return self.price + self.price_modifier_value
-        return None
-
-    def calculate_discount(self):
-        original = self.calculate_original_price()
-        if original and original > self.price:
-            return int(((original - self.price) / original) * 100)
-        return 0
-
     def save(self, *args, **kwargs):
         if not self.slug:
             self.slug = slugify(self.name)
-        self.original_price = self.calculate_original_price()
         super().save(*args, **kwargs)
+
+    def get_image_url(self):
+        if not self.image:
+            return None
+        if str(self.image).startswith('v'):
+            return f"https://res.cloudinary.com/{settings.CLOUDINARY_STORAGE['CLOUD_NAME']}/image/upload/{self.image}"
+        try:
+            public_id = str(self.image)
+            if public_id.startswith('products/'):
+                cloudinary_path = public_id
+            else:
+                filename = public_id.split('/')[-1]
+                cloudinary_path = f"products/{filename}"
+            result = cloudinary.uploader.explicit(cloudinary_path, type="upload")
+            return result['secure_url']
+        except Exception as e:
+            print(f"Error getting Cloudinary URL for product image: {str(e)}")
+            return f"{settings.MEDIA_URL}{self.image}"
+
+    def calculate_original_price(self):
+        if self.price_modifier_type == 'multiply':
+            return self.price * self.price_modifier_value
+        return self.price + self.price_modifier_value
+
+    def calculate_discount(self):
+        original_price = self.calculate_original_price()
+        if original_price == 0:
+            return 0
+        return int(((original_price - self.price) / original_price) * 100)
 
     def __str__(self):
         return self.name

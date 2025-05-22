@@ -2,6 +2,8 @@ from django.db import models
 from django.utils.text import slugify
 from froala_editor.fields import FroalaField
 from .user import User
+import cloudinary
+from django.conf import settings
 
 class NewsCategory(models.Model):
     name = models.CharField(max_length=100)
@@ -42,14 +44,40 @@ class News(models.Model):
         super().save(*args, **kwargs)
 
     def get_preview_image_url(self):
-        if self.preview_image and str(self.preview_image).startswith('v'):
-            return f"https://res.cloudinary.com/dgkommeq9/image/upload/{self.preview_image}"
-        return self.preview_image.url if self.preview_image else None
+        if not self.preview_image:
+            return None
+        if str(self.preview_image).startswith('v'):
+            return f"https://res.cloudinary.com/{settings.CLOUDINARY_STORAGE['CLOUD_NAME']}/image/upload/{self.preview_image}"
+        try:
+            public_id = str(self.preview_image)
+            if public_id.startswith('news/previews/'):
+                cloudinary_path = public_id
+            else:
+                filename = public_id.split('/')[-1]
+                cloudinary_path = f"news/previews/{filename}"
+            result = cloudinary.uploader.explicit(cloudinary_path, type="upload")
+            return result['secure_url']
+        except Exception as e:
+            print(f"Error getting Cloudinary URL for preview image: {str(e)}")
+            return f"{settings.MEDIA_URL}{self.preview_image}"
 
     def get_image_url(self):
-        if self.image and str(self.image).startswith('v'):
-            return f"https://res.cloudinary.com/dgkommeq9/image/upload/{self.image}"
-        return self.image.url if self.image else None
+        if not self.image:
+            return None
+        if str(self.image).startswith('v'):
+            return f"https://res.cloudinary.com/{settings.CLOUDINARY_STORAGE['CLOUD_NAME']}/image/upload/{self.image}"
+        try:
+            public_id = str(self.image)
+            if public_id.startswith('news/'):
+                cloudinary_path = public_id
+            else:
+                filename = public_id.split('/')[-1]
+                cloudinary_path = f"news/{filename}"
+            result = cloudinary.uploader.explicit(cloudinary_path, type="upload")
+            return result['secure_url']
+        except Exception as e:
+            print(f"Error getting Cloudinary URL for image: {str(e)}")
+            return f"{settings.MEDIA_URL}{self.image}"
 
     def __str__(self):
         return self.title
