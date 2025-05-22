@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'froala_editor',
     'rest_framework_simplejwt',
+    'cloudinary_storage',
+    'django.contrib.staticfiles.storage.ManifestStaticFilesStorage',
     
     # Local app
     'party',
@@ -149,7 +151,7 @@ if not DEBUG:
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
     
     # Configure media storage
-    DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
+    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
     MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
     MEDIA_URL = '/media/'
     
@@ -299,3 +301,18 @@ ADMIN_EMAIL = os.getenv('ADMIN_EMAIL')
 
 # For development/testing, you can use console backend instead:
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# Cloudinary settings
+    'CLOUD_NAME': os.getenv('CLOUDINARY_CLOUD_NAME'),
+    'API_KEY': os.getenv('CLOUDINARY_API_KEY'),
+    'API_SECRET': os.getenv('CLOUDINARY_API_SECRET')
+
+
+# Media files configuration
+MEDIA_URL = '/media/'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+# Static files configuration
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
