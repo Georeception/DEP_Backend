@@ -53,11 +53,19 @@ class NewsCategorySerializer(serializers.ModelSerializer):
 class NewsSerializer(serializers.ModelSerializer):
     category = NewsCategorySerializer(read_only=True)
     author = UserSerializer(read_only=True)
+    preview_image_url = serializers.SerializerMethodField()
+    image_url = serializers.SerializerMethodField()
 
     class Meta:
         model = News
         fields = '__all__'
         read_only_fields = ('author', 'created_at', 'updated_at')
+
+    def get_preview_image_url(self, obj):
+        return obj.get_preview_image_url()
+
+    def get_image_url(self, obj):
+        return obj.get_image_url()
 
 # Event Serializers
 class EventCategorySerializer(serializers.ModelSerializer):
@@ -76,11 +84,15 @@ class EventRegistrationSerializer(serializers.ModelSerializer):
 class EventSerializer(serializers.ModelSerializer):
     category = EventCategorySerializer(read_only=True)
     registrations = EventRegistrationSerializer(many=True, read_only=True)
+    preview_image_url = serializers.SerializerMethodField()
 
     class Meta:
         model = Event
         fields = '__all__'
         read_only_fields = ('created_at', 'updated_at')
+
+    def get_preview_image_url(self, obj):
+        return obj.get_preview_image_url()
 
 # Gallery Serializers
 class GalleryCategorySerializer(serializers.ModelSerializer):
@@ -91,11 +103,19 @@ class GalleryCategorySerializer(serializers.ModelSerializer):
 class GallerySerializer(serializers.ModelSerializer):
     category = GalleryCategorySerializer(read_only=True)
     uploaded_by = UserSerializer(read_only=True)
+    image_url = serializers.SerializerMethodField()
+    thumbnail_url = serializers.SerializerMethodField()
 
     class Meta:
         model = Gallery
         fields = '__all__'
         read_only_fields = ('uploaded_by', 'created_at', 'updated_at')
+
+    def get_image_url(self, obj):
+        return obj.get_image_url()
+
+    def get_thumbnail_url(self, obj):
+        return obj.get_thumbnail_url()
 
 # Leadership Serializers
 class LeadershipPositionSerializer(serializers.ModelSerializer):
@@ -182,13 +202,14 @@ class ProductSerializer(serializers.ModelSerializer):
     discount = serializers.IntegerField(read_only=True)
     reviews = ReviewSerializer(many=True, read_only=True)
     average_rating = serializers.SerializerMethodField()
+    image_url = serializers.SerializerMethodField()
 
     class Meta:
         model = Product
         fields = [
             'id', 'name', 'slug', 'description', 'price', 'original_price',
             'price_modifier_type', 'price_modifier_value', 'discount',
-            'image', 'category', 'stock', 'is_featured', 'reviews',
+            'image', 'image_url', 'category', 'stock', 'is_featured', 'reviews',
             'average_rating', 'created_at', 'updated_at'
         ]
         read_only_fields = ('created_at', 'updated_at', 'original_price', 'discount')
@@ -204,6 +225,11 @@ class ProductSerializer(serializers.ModelSerializer):
         data['original_price'] = instance.calculate_original_price()
         data['discount'] = instance.calculate_discount()
         return data
+
+    def get_image_url(self, obj):
+        if obj.image and str(obj.image).startswith('v'):
+            return f"https://res.cloudinary.com/dgkommeq9/image/upload/{obj.image}"
+        return obj.image.url if obj.image else None
 
 class OrderItemSerializer(serializers.ModelSerializer):
     product = ProductSerializer(read_only=True)

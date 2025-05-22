@@ -30,6 +30,16 @@ class Gallery(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     is_featured = models.BooleanField(default=False)
 
+    def get_image_url(self):
+        if self.image and str(self.image).startswith('v'):
+            return f"https://res.cloudinary.com/dgkommeq9/image/upload/{self.image}"
+        return self.image.url if self.image else None
+
+    def get_thumbnail_url(self):
+        if self.thumbnail and str(self.thumbnail).startswith('v'):
+            return f"https://res.cloudinary.com/dgkommeq9/image/upload/{self.thumbnail}"
+        return self.thumbnail.url if self.thumbnail else None
+
     def __str__(self):
         return self.title
 
