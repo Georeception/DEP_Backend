@@ -85,6 +85,16 @@ class News(models.Model):
 
         super().save(*args, **kwargs)
 
+    def get_preview_image_url(self):
+        if self.preview_image and str(self.preview_image).startswith('v'):
+            return f"https://res.cloudinary.com/dgkommeq9/image/upload/{self.preview_image}"
+        return self.preview_image.url if self.preview_image else None
+
+    def get_image_url(self):
+        if self.image and str(self.image).startswith('v'):
+            return f"https://res.cloudinary.com/dgkommeq9/image/upload/{self.image}"
+        return self.image.url if self.image else None
+
     def __str__(self):
         return self.title
 

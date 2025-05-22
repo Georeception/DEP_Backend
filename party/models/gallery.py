@@ -96,6 +96,21 @@ class Gallery(models.Model):
 
         super().save(*args, **kwargs)
 
+    def get_image_url(self):
+        if self.image and str(self.image).startswith('v'):
+            return f"https://res.cloudinary.com/dgkommeq9/image/upload/{self.image}"
+        return self.image.url if self.image else None
+
+    def get_video_url(self):
+        if self.video and str(self.video).startswith('v'):
+            return f"https://res.cloudinary.com/dgkommeq9/video/upload/{self.video}"
+        return self.video.url if self.video else None
+
+    def get_thumbnail_url(self):
+        if self.thumbnail and str(self.thumbnail).startswith('v'):
+            return f"https://res.cloudinary.com/dgkommeq9/image/upload/{self.thumbnail}"
+        return self.thumbnail.url if self.thumbnail else None
+
     def clean(self):
         from django.core.exceptions import ValidationError
         if self.media_type == 'image' and not self.image:

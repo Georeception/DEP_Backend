@@ -53,11 +53,19 @@ class NewsCategorySerializer(serializers.ModelSerializer):
 class NewsSerializer(serializers.ModelSerializer):
     category = NewsCategorySerializer(read_only=True)
     author = UserSerializer(read_only=True)
+    preview_image_url = serializers.SerializerMethodField()
+    image_url = serializers.SerializerMethodField()
 
     class Meta:
         model = News
         fields = '__all__'
         read_only_fields = ('author', 'created_at', 'updated_at')
+
+    def get_preview_image_url(self, obj):
+        return obj.get_preview_image_url()
+
+    def get_image_url(self, obj):
+        return obj.get_image_url()
 
 # Event Serializers
 class EventCategorySerializer(serializers.ModelSerializer):
@@ -76,11 +84,15 @@ class EventRegistrationSerializer(serializers.ModelSerializer):
 class EventSerializer(serializers.ModelSerializer):
     category = EventCategorySerializer(read_only=True)
     registrations = EventRegistrationSerializer(many=True, read_only=True)
+    preview_image_url = serializers.SerializerMethodField()
 
     class Meta:
         model = Event
         fields = '__all__'
         read_only_fields = ('created_at', 'updated_at')
+
+    def get_preview_image_url(self, obj):
+        return obj.get_preview_image_url()
 
 # Gallery Serializers
 class GalleryCategorySerializer(serializers.ModelSerializer):
@@ -89,13 +101,29 @@ class GalleryCategorySerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class GallerySerializer(serializers.ModelSerializer):
-    category = GalleryCategorySerializer(read_only=True)
-    uploaded_by = UserSerializer(read_only=True)
+    image_url = serializers.SerializerMethodField()
+    video_url = serializers.SerializerMethodField()
+    thumbnail_url = serializers.SerializerMethodField()
+    category_name = serializers.CharField(source='category.name', read_only=True)
+    uploaded_by_name = serializers.CharField(source='uploaded_by.get_full_name', read_only=True)
 
     class Meta:
         model = Gallery
-        fields = '__all__'
-        read_only_fields = ('uploaded_by', 'created_at', 'updated_at')
+        fields = [
+            'id', 'title', 'description', 'media_type', 'image', 'video', 'thumbnail',
+            'image_url', 'video_url', 'thumbnail_url', 'category', 'category_name',
+            'uploaded_by', 'uploaded_by_name', 'created_at', 'updated_at', 'is_featured'
+        ]
+        read_only_fields = ['uploaded_by']
+
+    def get_image_url(self, obj):
+        return obj.get_image_url()
+
+    def get_video_url(self, obj):
+        return obj.get_video_url()
+
+    def get_thumbnail_url(self, obj):
+        return obj.get_thumbnail_url()
 
 # Leadership Serializers
 class LeadershipPositionSerializer(serializers.ModelSerializer):
@@ -105,52 +133,14 @@ class LeadershipPositionSerializer(serializers.ModelSerializer):
 
 class NationalLeadershipSerializer(serializers.ModelSerializer):
     position = LeadershipPositionSerializer(read_only=True)
-    image = serializers.SerializerMethodField()
+    image_url = serializers.SerializerMethodField()
     
     class Meta:
         model = NationalLeadership
         fields = ['id', 'name', 'position', 'bio', 'image', 'start_date', 'end_date', 'is_active']
     
-    def get_image(self, obj):
-        if not obj.image:
-            return None
-        # If it's a full URL, return it as is
-        if str(obj.image).startswith('http'):
-            return str(obj.image)
-        # If it's a Cloudinary public_id (starts with 'v'), return the full URL
-        if str(obj.image).startswith('v'):
-            return f"https://res.cloudinary.com/{settings.CLOUDINARY_STORAGE['CLOUD_NAME']}/image/upload/{obj.image}"
-        # If it's a local path, try to get the Cloudinary URL
-        try:
-            # Get the Cloudinary URL for the image
-            # The public_id should be the path without the version number
-            public_id = str(obj.image)
-            print(f"Original image path: {public_id}")  # Debug log
-            
-            # Handle different path formats
-            if public_id.startswith('leadership/'):
-                # Path already includes leadership folder
-                cloudinary_path = public_id
-            else:
-                # Extract filename and add leadership folder
-                filename = public_id.split('/')[-1]
-                cloudinary_path = f"leadership/{filename}"
-            
-            print(f"Cloudinary path: {cloudinary_path}")  # Debug log
-            
-            # Try to get the image from Cloudinary
-            try:
-                result = cloudinary.uploader.explicit(cloudinary_path, type="upload")
-                print(f"Cloudinary result: {result}")  # Debug log
-                return result['secure_url']
-            except Exception as e:
-                print(f"Error getting Cloudinary URL: {str(e)}")  # Debug log
-                # Fallback to basic URL
-                return f"https://res.cloudinary.com/{settings.CLOUDINARY_STORAGE['CLOUD_NAME']}/image/upload/{cloudinary_path}"
-        except Exception as e:
-            print(f"Error in get_image for {obj.name}: {str(e)}")  # Debug log
-            # Fallback to local media URL if Cloudinary URL can't be generated
-            return f"{settings.MEDIA_URL}{obj.image}"
+    def get_image_url(self, obj):
+        return obj.get_image_url()
 
 # Donation Serializers
 class DonationSerializer(serializers.ModelSerializer):
