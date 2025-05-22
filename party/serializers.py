@@ -123,11 +123,14 @@ class NationalLeadershipSerializer(serializers.ModelSerializer):
         # If it's a local path, try to get the Cloudinary URL
         try:
             # Get the Cloudinary URL for the image
-            cloudinary_url = cloudinary.CloudinaryImage(str(obj.image)).build_url(
+            # The public_id should be the path without the version number
+            public_id = str(obj.image)
+            if '/' in public_id:
+                public_id = public_id.split('/')[-1]  # Get just the filename
+            cloudinary_url = cloudinary.CloudinaryImage(f"leadership/{public_id}").build_url(
                 version="auto",
                 format="auto",
-                quality="auto",
-                fetch_format="auto"
+                quality="auto"
             )
             print(f"Cloudinary URL for {obj.name}: {cloudinary_url}")  # Debug log
             return cloudinary_url
