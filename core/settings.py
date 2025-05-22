@@ -31,7 +31,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1,backend-dep-kwln.onrender.com').split(',')
 
 
 # Application definition
@@ -174,10 +174,13 @@ SIMPLE_JWT = {
 CORS_ALLOWED_ORIGINS = [
     "https://dep-party.onrender.com",
     "https://dep-party.com",
+    "http://localhost:3000",  # Add localhost for development
 ]
 
 CORS_ALLOW_CREDENTIALS = True
 
+# Add these additional CORS settings for better compatibility
+CORS_ALLOW_ALL_ORIGINS = False  # Keep this False for security
 CORS_ALLOW_METHODS = [
     'DELETE',
     'GET',
