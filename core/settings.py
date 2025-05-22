@@ -305,6 +305,12 @@ ADMIN_EMAIL = os.getenv('ADMIN_EMAIL')
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Cloudinary settings
+# Debug Cloudinary credentials
+print("Cloudinary Configuration:")
+print(f"Cloud Name: {os.getenv('CLOUDINARY_CLOUD_NAME')}")
+print(f"API Key: {os.getenv('CLOUDINARY_API_KEY')}")
+print(f"API Secret: {'*' * len(os.getenv('CLOUDINARY_API_SECRET', ''))}")
+
 cloudinary.config(
     cloud_name=os.getenv('CLOUDINARY_CLOUD_NAME'),
     api_key=os.getenv('CLOUDINARY_API_KEY'),
