@@ -305,23 +305,31 @@ ADMIN_EMAIL = os.getenv('ADMIN_EMAIL')
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Cloudinary settings
+# Get Cloudinary credentials
+CLOUDINARY_CLOUD_NAME = os.getenv('CLOUDINARY_CLOUD_NAME')
+CLOUDINARY_API_KEY = os.getenv('CLOUDINARY_API_KEY')
+CLOUDINARY_API_SECRET = os.getenv('CLOUDINARY_API_SECRET')
+
 # Debug Cloudinary credentials
-print("Cloudinary Configuration:")
-print(f"Cloud Name: {os.getenv('CLOUDINARY_CLOUD_NAME')}")
-print(f"API Key: {os.getenv('CLOUDINARY_API_KEY')}")
-print(f"API Secret: {'*' * len(os.getenv('CLOUDINARY_API_SECRET', ''))}")
+print("\nCloudinary Configuration:")
+print(f"Cloud Name: {CLOUDINARY_CLOUD_NAME}")
+print(f"API Key: {CLOUDINARY_API_KEY}")
+print(f"API Secret: {'*' * len(CLOUDINARY_API_SECRET) if CLOUDINARY_API_SECRET else 'Not set'}")
+
+if not all([CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET]):
+    raise ValueError("Cloudinary credentials are not properly configured. Please check your environment variables.")
 
 cloudinary.config(
-    cloud_name=os.getenv('CLOUDINARY_CLOUD_NAME'),
-    api_key=os.getenv('CLOUDINARY_API_KEY'),
-    api_secret=os.getenv('CLOUDINARY_API_SECRET'),
+    cloud_name=CLOUDINARY_CLOUD_NAME,
+    api_key=CLOUDINARY_API_KEY,
+    api_secret=CLOUDINARY_API_SECRET,
     secure=True
 )
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': os.getenv('CLOUDINARY_CLOUD_NAME'),
-    'API_KEY': os.getenv('CLOUDINARY_API_KEY'),
-    'API_SECRET': os.getenv('CLOUDINARY_API_SECRET'),
+    'CLOUD_NAME': CLOUDINARY_CLOUD_NAME,
+    'API_KEY': CLOUDINARY_API_KEY,
+    'API_SECRET': CLOUDINARY_API_SECRET,
     'STATIC_TAG': 'static',
     'MEDIA_TAG': 'media',
     'INVALID_VIDEO_ERROR_MESSAGE': 'Please upload a valid video file.',
