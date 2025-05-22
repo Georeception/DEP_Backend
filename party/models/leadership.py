@@ -43,6 +43,8 @@ class NationalLeadership(models.Model):
             try:
                 # Get the file object directly
                 file_obj = self.image.file
+                # Reset file pointer to beginning
+                file_obj.seek(0)
                 # Upload to Cloudinary using the file object
                 result = cloudinary.uploader.upload(
                     file_obj,
@@ -51,7 +53,7 @@ class NationalLeadership(models.Model):
                 )
                 print(f"Cloudinary upload result: {result}")
                 # Update the image field with Cloudinary version
-                self.image = result['version'] + '/' + result['public_id']
+                self.image = f"v{result['version']}/{result['public_id']}"
             except Exception as e:
                 print(f"Error uploading to Cloudinary: {str(e)}")
         super().save(*args, **kwargs)
