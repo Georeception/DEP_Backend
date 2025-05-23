@@ -26,6 +26,7 @@ from .views import (
     ConstituencyViewSet,
     WardViewSet
 )
+from .views.shop import PickupLocationViewSet
 from .views.newsletter import subscribe, verify_subscription, unsubscribe
 
 router = DefaultRouter()
@@ -34,6 +35,7 @@ router = DefaultRouter()
 router.register(r'counties', CountyViewSet, basename='county')
 router.register(r'constituencies', ConstituencyViewSet, basename='constituency')
 router.register(r'wards', WardViewSet, basename='ward')
+router.register(r'pickup-locations', PickupLocationViewSet, basename='pickup-location')
 
 # Other URLs
 router.register(r'users', UserViewSet, basename='user')

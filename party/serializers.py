@@ -10,6 +10,7 @@ from .models import (
 from .models.locations import County, Constituency, Ward
 from django.conf import settings
 import cloudinary
+from .models.shop import PickupLocation
 
 # User Serializers
 class UserRegistrationSerializer(serializers.ModelSerializer):
@@ -307,4 +308,10 @@ class CountyDetailSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = County
-        fields = ['id', 'name', 'code', 'constituencies'] 
+        fields = ['id', 'name', 'code', 'constituencies']
+
+class PickupLocationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PickupLocation
+        fields = ['id', 'name', 'address', 'city', 'state', 'zip_code', 'phone', 'email', 'is_active']
+        read_only_fields = ['created_at', 'updated_at'] 

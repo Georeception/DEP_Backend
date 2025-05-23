@@ -2,10 +2,10 @@ from rest_framework import viewsets, status
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnly
-from ..models.shop import Product, Order, OrderItem, ProductCategory, Review
+from ..models.shop import Product, Order, OrderItem, ProductCategory, Review, PickupLocation
 from ..serializers import (
     ProductSerializer, OrderSerializer, OrderItemSerializer,
-    ProductCategorySerializer, ReviewSerializer
+    ProductCategorySerializer, ReviewSerializer, PickupLocationSerializer
 )
 
 class ProductViewSet(viewsets.ModelViewSet):
@@ -116,4 +116,9 @@ class OrderViewSet(viewsets.ModelViewSet):
             'message': 'Payment verified',
             'order_id': order.id,
             'status': order.status
-        }) 
+        })
+
+class PickupLocationViewSet(viewsets.ModelViewSet):
+    queryset = PickupLocation.objects.filter(is_active=True)
+    serializer_class = PickupLocationSerializer
+    http_method_names = ['get']  # Only allow GET requests for pickup locations 

@@ -8,6 +8,7 @@ from .models import (
     MembershipPlan, Membership, NewsletterSubscription
 )
 from .models.locations import County, Constituency, Ward
+from .models.shop import PickupLocation
 
 # Location Admin
 @admin.register(County)
@@ -196,6 +197,29 @@ class NewsletterSubscriptionAdmin(admin.ModelAdmin):
         }),
         ('Timestamps', {
             'fields': ('subscription_date', 'last_updated'),
+            'classes': ('collapse',)
+        }),
+    )
+
+@admin.register(PickupLocation)
+class PickupLocationAdmin(admin.ModelAdmin):
+    list_display = ('name', 'city', 'state', 'phone', 'email', 'is_active')
+    list_filter = ('is_active', 'city', 'state')
+    search_fields = ('name', 'address', 'city', 'state', 'phone', 'email')
+    ordering = ('city', 'name')
+    readonly_fields = ('created_at', 'updated_at')
+    fieldsets = (
+        ('Basic Information', {
+            'fields': ('name', 'is_active')
+        }),
+        ('Location Details', {
+            'fields': ('address', 'city', 'state', 'zip_code')
+        }),
+        ('Contact Information', {
+            'fields': ('phone', 'email')
+        }),
+        ('Timestamps', {
+            'fields': ('created_at', 'updated_at'),
             'classes': ('collapse',)
         }),
     )
