@@ -122,3 +122,4 @@ class PickupLocationViewSet(viewsets.ModelViewSet):
     queryset = PickupLocation.objects.filter(is_active=True)
     serializer_class = PickupLocationSerializer
     http_method_names = ['get']  # Only allow GET requests for pickup locations 
+    permission_classes = [AllowAny]
