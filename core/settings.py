@@ -199,7 +199,8 @@ CORS_ALLOWED_ORIGINS = [
     "https://dep-party.onrender.com",
     "https://dep-party.com",
     "http://localhost:3000",
-    "http://192.168.56.1:3000"
+    "http://192.168.56.1:3000",
+    "http://192.168.100.184:3000"
 ]
 
 CORS_ALLOW_CREDENTIALS = True
