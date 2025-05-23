@@ -7,6 +7,7 @@ from ..serializers import (
     ProductSerializer, OrderSerializer, OrderItemSerializer,
     ProductCategorySerializer, ReviewSerializer, PickupLocationSerializer
 )
+from rest_framework.permissions import AllowAny
 
 class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()
