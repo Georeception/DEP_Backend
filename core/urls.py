@@ -30,6 +30,7 @@ from party.views.views import (
     MembershipViewSet, UserViewSet, CountyViewSet,
     ConstituencyViewSet, WardViewSet
 )
+from party.views.shop import PickupLocationViewSet
 from party.views.newsletter import subscribe, verify_subscription, unsubscribe
 from django.views.static import serve
 
@@ -54,6 +55,7 @@ router.register(r'users', UserViewSet)
 router.register(r'counties', CountyViewSet)
 router.register(r'constituencies', ConstituencyViewSet, basename='constituency')
 router.register(r'wards', WardViewSet, basename='ward')
+router.register(r'pickup-locations', PickupLocationViewSet, basename='pickup-location')
 
 urlpatterns = [
     path('admin/', admin.site.urls),

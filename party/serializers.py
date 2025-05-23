@@ -313,5 +313,5 @@ class CountyDetailSerializer(serializers.ModelSerializer):
 class PickupLocationSerializer(serializers.ModelSerializer):
     class Meta:
         model = PickupLocation
-        fields = ['id', 'name', 'address', 'city', 'state', 'zip_code', 'phone', 'email', 'is_active']
+        fields = '__all__'
         read_only_fields = ['created_at', 'updated_at'] 
