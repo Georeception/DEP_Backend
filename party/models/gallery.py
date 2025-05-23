@@ -36,15 +36,16 @@ class Gallery(models.Model):
     def get_image_url(self):
         if not self.image:
             return None
-        if str(self.image).startswith('v'):
-            return f"https://res.cloudinary.com/{settings.CLOUDINARY_STORAGE['CLOUD_NAME']}/image/upload/{self.image}"
         return self.image.url if self.image else None
+
+    def get_video_url(self):
+        if not self.video:
+            return None
+        return self.video.url if self.video else None
 
     def get_thumbnail_url(self):
         if not self.thumbnail:
             return None
-        if str(self.thumbnail).startswith('v'):
-            return f"https://res.cloudinary.com/{settings.CLOUDINARY_STORAGE['CLOUD_NAME']}/image/upload/{self.thumbnail}"
         return self.thumbnail.url if self.thumbnail else None
 
     def clean(self):
