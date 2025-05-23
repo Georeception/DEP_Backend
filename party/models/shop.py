@@ -26,6 +26,7 @@ class Product(models.Model):
     slug = models.SlugField(unique=True)
     description = models.TextField()
     price = models.DecimalField(max_digits=10, decimal_places=2)
+    original_price = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
     price_modifier_type = models.CharField(max_length=10, choices=[('multiply', 'Multiply'), ('add', 'Add')], default='multiply')
     price_modifier_value = models.DecimalField(max_digits=10, decimal_places=2, default=1.0)
     image = models.ImageField(upload_to='products/', storage=MediaCloudinaryStorage())
@@ -38,6 +39,8 @@ class Product(models.Model):
     def save(self, *args, **kwargs):
         if not self.slug:
             self.slug = slugify(self.name)
+        if not self.original_price:
+            self.original_price = self.calculate_original_price()
         super().save(*args, **kwargs)
 
     def get_image_url(self):
@@ -53,10 +56,11 @@ class Product(models.Model):
         return self.price + self.price_modifier_value
 
     def calculate_discount(self):
-        original_price = self.calculate_original_price()
-        if original_price == 0:
+        if not self.original_price:
             return 0
-        return int(((original_price - self.price) / original_price) * 100)
+        if self.original_price == 0:
+            return 0
+        return int(((self.original_price - self.price) / self.original_price) * 100)
 
     def __str__(self):
         return self.name
