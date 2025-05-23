@@ -41,7 +41,14 @@ class Gallery(models.Model):
     def get_video_url(self):
         if not self.video:
             return None
-        return self.video.url if self.video else None
+        # Extract the public_id from the video path
+        if str(self.video).startswith('v'):
+            # If it's already a Cloudinary URL, return it as is
+            return self.video.url
+        else:
+            # Construct the proper video URL
+            public_id = str(self.video).replace('gallery/videos/', '')
+            return f"https://res.cloudinary.com/{settings.CLOUDINARY_STORAGE['CLOUD_NAME']}/video/upload/{public_id}"
 
     def get_thumbnail_url(self):
         if not self.thumbnail:
