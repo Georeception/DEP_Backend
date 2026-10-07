@@ -2,7 +2,7 @@ from django.db import models
 from .user import User
 import cloudinary
 from django.conf import settings
-from cloudinary_storage.storage import MediaCloudinaryStorage
+from cloudinary_storage.storage import MediaCloudinaryStorage, VideoMediaCloudinaryStorage
 
 class GalleryCategory(models.Model):
     name = models.CharField(max_length=100)
@@ -25,7 +25,7 @@ class Gallery(models.Model):
     description = models.TextField()
     media_type = models.CharField(max_length=10, choices=MEDIA_TYPE_CHOICES, default='image')
     image = models.ImageField(upload_to='gallery/images/', storage=MediaCloudinaryStorage(), null=True, blank=True)
-    video = models.FileField(upload_to='gallery/videos/', storage=MediaCloudinaryStorage(), null=True, blank=True)
+    video = models.FileField(upload_to='gallery/videos/', storage=VideoMediaCloudinaryStorage(), null=True, blank=True)
     thumbnail = models.ImageField(upload_to='gallery/thumbnails/', storage=MediaCloudinaryStorage(), null=True, blank=True)
     category = models.ForeignKey(GalleryCategory, on_delete=models.CASCADE, related_name='gallery_items')
     uploaded_by = models.ForeignKey(User, on_delete=models.CASCADE)
