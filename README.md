@@ -4,6 +4,12 @@
 
 Configure `ALLOWED_HOSTS` as a comma-separated list of hostnames and `CORS_ALLOWED_ORIGINS` as a comma-separated list of frontend origins in the backend environment. Django reads these values from the environment; the Render blueprint requests both values during service configuration.
 
+## Deploying on Render
+
+Deploy this directory as the service's repository root, or set the Render service's Root Directory to `backend` when deploying from the monorepo. The build command is `sh build.sh`; ensure `build.sh` is committed and pushed to the branch Render deploys. It installs the pinned dependencies, applies committed migrations, and collects static assets. The start command binds Gunicorn to Render's assigned `$PORT`.
+
+Set the environment values requested by `render.yaml` in Render. In particular, provide a unique `SECRET_KEY`, the PostgreSQL connection fields, the Cloudinary credentials, `ALLOWED_HOSTS` (including the Render hostname), and `CORS_ALLOWED_ORIGINS` (including the exact frontend origin). Configure the email variables if newsletter email delivery is required. Do not commit secret values. Production media uploads use Cloudinary, so the free web service does not require a persistent disk.
+
 This document explains how Cloudinary is integrated into our Django backend for handling media uploads.
 
 ## Overview
