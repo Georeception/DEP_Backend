@@ -5,7 +5,7 @@ services:
     region: oregon
     plan: free
     buildCommand: sh build.sh
-    startCommand: gunicorn core.wsgi:application --bind 0.0.0.0:$PORT
+    startCommand: gunicorn core.wsgi:application --bind 0.0.0.0:$PORT --timeout 180
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.0
