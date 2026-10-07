@@ -41,3 +41,5 @@ services:
         sync: false
       - key: ADMIN_EMAIL
         sync: false
+      - key: PAYSTACK_SECRET_KEY
+        sync: false

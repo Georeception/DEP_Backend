@@ -1,0 +1,1451 @@
+COUNTRY,NAME_1,NAME_2,NAME_3,TYPE_3
+Kenya,Isiolo,Isiolo North,Wabera,Ward
+Kenya,Migori,Rongo,North Kamagambo,Ward
+Kenya,Migori,Rongo,Central Kamagambo,Ward
+Kenya,Migori,Rongo,South Kamagambo,Ward
+Kenya,Migori,Awendo,North Sakwa,Ward
+Kenya,Migori,Awendo,South Sakwa,Ward
+Kenya,Migori,Awendo,West Sakwa,Ward
+Kenya,Migori,Awendo,Central Sakwa,Ward
+Kenya,Migori,Suna East,God Jope,Ward
+Kenya,Migori,Suna East,Suna Central,Ward
+Kenya,Migori,Suna East,Kakrao,Ward
+Kenya,Migori,Suna East,Kwa,Ward
+Kenya,Migori,Suna West,Wiga,Ward
+Kenya,Migori,Suna West,Ragana-Oruba,Ward
+Kenya,Migori,Suna West,Wasimbete,Ward
+Kenya,Migori,Uriri,West Kanyamkago,Ward
+Kenya,Migori,Uriri,Central Kanyamkago,Ward
+Kenya,Migori,Uriri,South Kanyamkago,Ward
+Kenya,Migori,Uriri,East Kanyamkago,Ward
+Kenya,Migori,Kuria West,Masaba,Ward
+Kenya,Migori,Kuria East,Ntimaru West,Ward
+Kenya,Machakos,Machakos Town,Kalama,Ward
+Kenya,Machakos,Machakos Town,Mua,Ward
+Kenya,Machakos,Machakos Town,Mutituni,Ward
+Kenya,Machakos,Machakos Town,Machakos Central,Ward
+Kenya,Machakos,Machakos Town,Mumbuni North,Ward
+Kenya,Machakos,Machakos Town,Kola,Ward
+Kenya,Machakos,Mwala,Mbiuni,Ward
+Kenya,Machakos,Mwala,Masii,Ward
+Kenya,Machakos,Mwala,Muthetheni,Ward
+Kenya,Machakos,Mwala,Wamunyu,Ward
+Kenya,Machakos,Mwala,Kibauni,Ward
+Kenya,Homa Bay,Kasipul,West Kasipul,Ward
+Kenya,Homa Bay,Kasipul,South Kasipul,Ward
+Kenya,Homa Bay,Kasipul,Central Kasipul,Ward
+Kenya,Homa Bay,Kasipul,East Kamagak,Ward
+Kenya,Homa Bay,Kasipul,West Kamagak,Ward
+Kenya,Homa Bay,Kabondo Kasipul,Kabondo East,Ward
+Kenya,Homa Bay,Kabondo Kasipul,Kabondo West,Ward
+Kenya,Homa Bay,Kabondo Kasipul,Kokwanyo/Kakelo,Ward
+Kenya,Homa Bay,Kabondo Kasipul,Kojwach,Ward
+Kenya,Homa Bay,Karachuonyo,West Karachuonyo,Ward
+Kenya,Homa Bay,Karachuonyo,North Karachuonyo,Ward
+Kenya,Homa Bay,Karachuonyo,Central,Ward
+Kenya,Homa Bay,Karachuonyo,Kanyaluo,Ward
+Kenya,Homa Bay,Rangwe,Kagan,Ward
+Kenya,Homa Bay,Rangwe,Kochia,Ward
+Kenya,Homa Bay,Homa Bay Town,Homa Bay Central,Ward
+Kenya,Homa Bay,Homa Bay Town,Homa Bay Arujo,Ward
+Kenya,Homa Bay,Homa Bay Town,Homa Bay East,Ward
+Kenya,Homa Bay,Ndhiwa,Kwabwai,Ward
+Kenya,Homa Bay,Ndhiwa,Kanyadoto,Ward
+Kenya,Homa Bay,Ndhiwa,Kanyikela,Ward
+Kenya,Homa Bay,Ndhiwa,Kabuoch South/Pala,Ward
+Kenya,Homa Bay,Ndhiwa,Kanyamwa Kosewe,Ward
+Kenya,Homa Bay,Suba North,Mfangano Island,Ward
+Kenya,Homa Bay,Suba North,Rusinga Island,Ward
+Kenya,Homa Bay,Suba North,Kasgunga,Ward
+Kenya,Vihiga,Sabatia,Chavakali,Ward
+Kenya,Vihiga,Sabatia,Busali,Ward
+Kenya,Vihiga,Hamisi,Shiru,Ward
+Kenya,Vihiga,Hamisi,Gisambai,Ward
+Kenya,Vihiga,Hamisi,Muhudu,Ward
+Kenya,Vihiga,Hamisi,Tambua,Ward
+Kenya,Vihiga,Hamisi,Jepkoyai,Ward
+Kenya,Vihiga,Luanda,Luanda South,Ward
+Kenya,Vihiga,Emuhaya,North East Bunyore,Ward
+Kenya,Vihiga,Hamisi,Banja,Ward
+Kenya,Vihiga,Vihiga,South Maragoli,Ward
+Kenya,Vihiga,Hamisi,Shamakhokho,Ward
+Kenya,Bungoma,Mt. Elgon,Cheptais,Ward
+Kenya,Bungoma,Mt. Elgon,Kaptama,Ward
+Kenya,Bungoma,Sirisia,Malakisi/South Kulisiru,Ward
+Kenya,Bungoma,Sirisia,Lwandanyi,Ward
+Kenya,Bungoma,Kabuchai,West Nalondo,Ward
+Kenya,Bungoma,Kabuchai,Mukuyuni,Ward
+Kenya,Bungoma,Bumula,Kabula,Ward
+Kenya,Bungoma,Bumula,Kimaeti,Ward
+Kenya,Bungoma,Bumula,Siboti,Ward
+Kenya,Bungoma,Kanduyi,Bukembe West,Ward
+Kenya,Bungoma,Kanduyi,Bukembe East,Ward
+Kenya,Bungoma,Webuye West,Bokoli,Ward
+Kenya,Bungoma,Kimilili,Kibingei,Ward
+Kenya,Bungoma,Kimilili,Kimilili,Ward
+Kenya,Bungoma,Kimilili,Maeni,Ward
+Kenya,Bungoma,Kimilili,Kamukuywa,Ward
+Kenya,Bungoma,Tongaren,Mbakalo,Ward
+Kenya,Bungoma,Tongaren,Naitiri/Kabuyefwe,Ward
+Kenya,Bungoma,Tongaren,Milima,Ward
+Kenya,Bungoma,Tongaren,Ndalu/ Tabani,Ward
+Kenya,Bungoma,Tongaren,Tongaren,Ward
+Kenya,Bungoma,Tongaren,Soysambu/ Mitua,Ward
+Kenya,Kakamega,Lugari,Mautuma,Ward
+Kenya,Kakamega,Lugari,Lugari,Ward
+Kenya,Kakamega,Lugari,Lumakanda,Ward
+Kenya,Kakamega,Lugari,Chekalini,Ward
+Kenya,Kakamega,Lugari,Chevaywa,Ward
+Kenya,Kakamega,Lugari,Lwandeti,Ward
+Kenya,Kakamega,Likuyani,Likuyani,Ward
+Kenya,Kakamega,Likuyani,Sango,Ward
+Kenya,Kakamega,Likuyani,Kongoni,Ward
+Kenya,Kakamega,Likuyani,Nzoia,Ward
+Kenya,Kakamega,Likuyani,Sinoko,Ward
+Kenya,Kakamega,Malava,West Kabras,Ward
+Kenya,Kakamega,Malava,Chemuche,Ward
+Kenya,Kakamega,Malava,East Kabras,Ward
+Kenya,Kakamega,Malava,Manda-Shivanga,Ward
+Kenya,Kakamega,Malava,South Kabras,Ward
+Kenya,Kakamega,Lurambi,Butsotso East,Ward
+Kenya,Kakamega,Lurambi,Butsotso South,Ward
+Kenya,Kakamega,Lurambi,Butsotso Central,Ward
+Kenya,Kakamega,Lurambi,Sheywe,Ward
+Kenya,Kakamega,Lurambi,Mahiakalo,Ward
+Kenya,Kakamega,Lurambi,Shirere,Ward
+Kenya,Kakamega,Navakholo,Bunyala West,Ward
+Kenya,Kakamega,Navakholo,Bunyala East,Ward
+Kenya,Kakamega,Navakholo,Bunyala Central,Ward
+Kenya,Kakamega,Mumias West,Mumias Central,Ward
+Kenya,Mombasa,Changamwe,Kipevu,Ward
+Kenya,Tana River,Galole,Chewani,Ward
+Kenya,Tana River,Galole,Kinakomba,Ward
+Kenya,Migori,Nyatike,Kanyasa,Ward
+Kenya,Migori,Nyatike,North Kadem,Ward
+Kenya,Migori,Nyatike,Macalder/Kanyarwanda,Ward
+Kenya,Migori,Nyatike,Kaler,Ward
+Kenya,Migori,Nyatike,Got Kachola,Ward
+Kenya,Migori,Nyatike,Muhuru,Ward
+Kenya,Migori,Kuria West,Bukira East,Ward
+Kenya,Migori,Kuria West,Isibania,Ward
+Kenya,Mombasa,Changamwe,Airport,Ward
+Kenya,Lamu,Lamu East,Faza,Ward
+Kenya,Lamu,Lamu East,Kiunga,Ward
+Kenya,Lamu,Lamu East,Basuba,Ward
+Kenya,Lamu,Lamu West,Shella,Ward
+Kenya,Lamu,Lamu West,Hindi,Ward
+Kenya,Tana River,Bura,Bangale,Ward
+Kenya,Tana River,Bura,Sala,Ward
+Kenya,Lamu,Lamu West,Hongwe,Ward
+Kenya,Kakamega,Mumias East,East Wanga,Ward
+Kenya,Kakamega,Matungu,Koyonzo,Ward
+Kenya,Kakamega,Matungu,Kholera,Ward
+Kenya,Kakamega,Matungu,Khalaba,Ward
+Kenya,Taita Taveta,Taveta,Chala,Ward
+Kenya,Taita Taveta,Taveta,Mata,Ward
+Kenya,Migori,Kuria West,Tagare,Ward
+Kenya,Taita Taveta,Wundanyi,Wundanyi/Mbale,Ward
+Kenya,Taita Taveta,Wundanyi,Wumingu/Kishushe,Ward
+Kenya,Migori,Kuria West,Nyamosense/Komosoko,Ward
+Kenya,Migori,Kuria East,Gokeharaka/Getambwega,Ward
+Kenya,Migori,Kuria East,Ntimaru East,Ward
+Kenya,Migori,Kuria East,Nyabasi East,Ward
+Kenya,Migori,Kuria East,Nyabasi West,Ward
+Kenya,Migori,Rongo,East Kamagambo,Ward
+Kenya,Machakos,Masinga,Kivaa,Ward
+Kenya,Machakos,Masinga,Masinga Central,Ward
+Kenya,Machakos,Masinga,Ekalakala,Ward
+Kenya,Machakos,Masinga,Muthesya,Ward
+Kenya,Machakos,Yatta,Ndalani,Ward
+Kenya,Machakos,Yatta,Matuu,Ward
+Kenya,Machakos,Yatta,Kithimani,Ward
+Kenya,Machakos,Yatta,Ikombe,Ward
+Kenya,Machakos,Yatta,Katangi,Ward
+Kenya,Machakos,Kangundo,Kangundo North,Ward
+Kenya,Machakos,Kangundo,Kangundo Central,Ward
+Kenya,Machakos,Kangundo,Kangundo East,Ward
+Kenya,Machakos,Kangundo,Kangundo West,Ward
+Kenya,Machakos,Matungulu,Tala,Ward
+Kenya,Machakos,Matungulu,Matungulu North,Ward
+Kenya,Machakos,Matungulu,Matungulu East,Ward
+Kenya,Machakos,Matungulu,Matungulu West,Ward
+Kenya,Machakos,Matungulu,Kyeleni,Ward
+Kenya,Machakos,Kathiani,Kathiani Central,Ward
+Kenya,Machakos,Mavoko,Athi River,Ward
+Kenya,Machakos,Mavoko,Kinanie,Ward
+Kenya,Homa Bay,Karachuonyo,Kibiri,Ward
+Kenya,Homa Bay,Karachuonyo,Kendu Bay Town,Ward
+Kenya,Homa Bay,Rangwe,West Gem,Ward
+Kenya,Homa Bay,Rangwe,East Gem,Ward
+Kenya,Homa Bay,Homa Bay Town,Homa Bay West,Ward
+Kenya,Garissa,Garissa Township,Township,Ward
+Kenya,Homa Bay,Ndhiwa,Kanyamwa Kologi,Ward
+Kenya,Homa Bay,Suba North,Gembe,Ward
+Kenya,Homa Bay,Suba North,Lambwe,Ward
+Kenya,Homa Bay,Suba South,Gwassi South,Ward
+Kenya,Homa Bay,Suba South,Gwassi North,Ward
+Kenya,Garissa,Garissa Township,Waberi,Ward
+Kenya,Garissa,Balambala,Balambala,Ward
+Kenya,Garissa,Balambala,Danyere,Ward
+Kenya,Garissa,Balambala,Saka,Ward
+Kenya,Garissa,Balambala,Sankuri,Ward
+Kenya,Garissa,Lagdera,Modogashe,Ward
+Kenya,Garissa,Lagdera,Benane,Ward
+Kenya,Garissa,Lagdera,Goreale,Ward
+Kenya,Mombasa,Changamwe,Changamwe,Ward
+Kenya,Vihiga,Vihiga,Lugaga-Wamuluma,Ward
+Kenya,Vihiga,Vihiga,Central Maragoli,Ward
+Kenya,Vihiga,Sabatia,Lyaduywa/Izava,Ward
+Kenya,Vihiga,Sabatia,West Sabatia,Ward
+Kenya,Garissa,Fafi,Nanighi,Ward
+Kenya,Garissa,Ijara,Hulugho,Ward
+Kenya,Garissa,Ijara,Sangailu,Ward
+Kenya,Vihiga,Sabatia,North Maragoli,Ward
+Kenya,Vihiga,Sabatia,Wodanga,Ward
+Kenya,Vihiga,Luanda,Luanda Township,Ward
+Kenya,Vihiga,Luanda,Wemilabi,Ward
+Kenya,Vihiga,Luanda,Mwibona,Ward
+Kenya,Wajir,Wajir North,Malkagufu,Ward
+Kenya,Wajir,Wajir North,Batalu,Ward
+Kenya,Vihiga,Luanda,Emabungo,Ward
+Kenya,Wajir,Wajir North,Godoma,Ward
+Kenya,Vihiga,Emuhaya,Central Bunyore,Ward
+Kenya,Vihiga,Emuhaya,West Bunyore,Ward
+Kenya,Tana River,Galole,Mikinduni,Ward
+Kenya,Wajir,Wajir East,Khorof/Harar,Ward
+Kenya,Wajir,Tarbaj,Elben,Ward
+Kenya,Wajir,Tarbaj,Sarman,Ward
+Kenya,Wajir,Tarbaj,Tarbaj,Ward
+Kenya,Wajir,Tarbaj,Wargadud,Ward
+Kenya,Taita Taveta,Mwatate,Bura,Ward
+Kenya,Mombasa,Jomvu,Jomvu Kuu,Ward
+Kenya,Vihiga,Vihiga,Mungoma,Ward
+Kenya,Bungoma,Mt. Elgon,Chesikaki,Ward
+Kenya,Bungoma,Mt. Elgon,Chepyuk,Ward
+Kenya,Bungoma,Mt. Elgon,Elgon,Ward
+Kenya,Kakamega,Khwisero,Kisa North,Ward
+Kenya,Busia,Nambale,Nambale Township,Ward
+Kenya,Busia,Nambale,Bukhayo East,Ward
+Kenya,Busia,Nambale,Bukhayo Central,Ward
+Kenya,Busia,Matayos,Bukhayo West,Ward
+Kenya,Mandera,Mandera North,Rhamu,Ward
+Kenya,Mandera,Mandera South,Elwak South,Ward
+Kenya,Mandera,Mandera East,Arabia,Ward
+Kenya,Marsabit,Moyale,Butiye,Ward
+Kenya,Marsabit,Moyale,Sololo,Ward
+Kenya,Marsabit,Moyale,Heillu/Manyatta,Ward
+Kenya,Marsabit,Moyale,Golbo,Ward
+Kenya,Marsabit,North Horr,North Horr,Ward
+Kenya,Marsabit,North Horr,Illeret,Ward
+Kenya,Marsabit,Saku,Sagante/Jaldesa,Ward
+Kenya,Busia,Matayos,Matayos South,Ward
+Kenya,Busia,Matayos,Busibwabo,Ward
+Kenya,Busia,Matayos,Burumba,Ward
+Kenya,Marsabit,Laisamis,Laisamis,Ward
+Kenya,Meru,Igembe South,Maua,Ward
+Kenya,Meru,Igembe South,Kiegoi/Antubochiu,Ward
+Kenya,Meru,Igembe South,Athiru Gaiti,Ward
+Kenya,Meru,Igembe South,Akachiu,Ward
+Kenya,Meru,Igembe South,Kanuni,Ward
+Kenya,Meru,Igembe Central,Akirang'Ondu,Ward
+Kenya,Meru,Igembe Central,Athiru Ruujine,Ward
+Kenya,Meru,Igembe Central,Njia,Ward
+Kenya,Meru,Igembe Central,Kangeta,Ward
+Kenya,Meru,Igembe North,Antuambui,Ward
+Kenya,Meru,Igembe North,Ntunene,Ward
+Kenya,Meru,Igembe North,Antubetwe Kiongo,Ward
+Kenya,Meru,Igembe North,Naathu,Ward
+Kenya,Meru,Igembe North,Amwathi,Ward
+Kenya,Meru,Tigania West,Athwana,Ward
+Kenya,Meru,Tigania West,Akithii,Ward
+Kenya,Meru,Tigania West,Kianjai,Ward
+Kenya,Meru,Tigania West,Nkomo,Ward
+Kenya,Meru,Tigania West,Mbeu,Ward
+Kenya,Meru,Tigania East,Thangatha,Ward
+Kenya,Meru,Tigania East,Mikinduri,Ward
+Kenya,Meru,Tigania East,Kiguchwa,Ward
+Kenya,Meru,Tigania East,Muthara,Ward
+Kenya,Meru,Tigania East,Karama,Ward
+Kenya,Meru,North Imenti,Municipality,Ward
+Kenya,Meru,North Imenti,Ntima East,Ward
+Kenya,Meru,North Imenti,Ntima West,Ward
+Kenya,Meru,North Imenti,Nyaki West,Ward
+Kenya,Meru,North Imenti,Nyaki East,Ward
+Kenya,Meru,Buuri,Timau,Ward
+Kenya,Meru,Buuri,Kisima,Ward
+Kenya,Meru,Central Imenti,Abothuguchi Central,Ward
+Kenya,Meru,Central Imenti,Abothuguchi West,Ward
+Kenya,Meru,Buuri,Kibirichia,Ward
+Kenya,Meru,South Imenti,Mitunguu,Ward
+Kenya,Meru,South Imenti,Igoji East,Ward
+Kenya,Meru,South Imenti,Igoji West,Ward
+Kenya,Meru,South Imenti,Abogeta East,Ward
+Kenya,Meru,South Imenti,Abogeta West,Ward
+Kenya,Meru,South Imenti,Nkuene,Ward
+Kenya,Tharaka-Nithi,Maara,Mitheru,Ward
+Kenya,Tharaka-Nithi,Maara,Mwimbi,Ward
+Kenya,Bungoma,Sirisia,Namwela,Ward
+Kenya,Nyandarua,Ol Jorok,Charagita,Ward
+Kenya,Bungoma,Kabuchai,Kabuchai/Chwele,Ward
+Kenya,Bungoma,Kabuchai,Bwake/Luuya,Ward
+Kenya,Kitui,Mwingi North,Mumoni,Ward
+Kenya,Kitui,Mwingi North,Tseikuru,Ward
+Kenya,Kitui,Mwingi North,Tharaka,Ward
+Kenya,Kitui,Mwingi West,Kyome/Thaana,Ward
+Kenya,Kitui,Mwingi West,Nguutani,Ward
+Kenya,Kitui,Mwingi West,Migwani,Ward
+Kenya,Kitui,Mwingi West,Kiomo/Kyethani,Ward
+Kenya,Kitui,Mwingi Central,Central,Ward
+Kenya,Kitui,Mwingi Central,Kivou,Ward
+Kenya,Kitui,Mwingi Central,Nguni,Ward
+Kenya,Kitui,Mwingi Central,Nuu,Ward
+Kenya,Kitui,Mwingi Central,Mui,Ward
+Kenya,Bungoma,Bumula,South Bukusu,Ward
+Kenya,Nyeri,Othaya,Iria-Ini,Ward
+Kenya,Nyeri,Othaya,Chinga,Ward
+Kenya,Turkana,Turkana North,Nakalale,Ward
+Kenya,Kitui,Kitui Rural,Kwavonza/Yatta,Ward
+Kenya,Kitui,Kitui Rural,Kanyangi,Ward
+Kenya,Kitui,Kitui Central,Miambani,Ward
+Kenya,Kitui,Kitui Central,Township,Ward
+Kenya,Kitui,Kitui Central,Kyangwithya West,Ward
+Kenya,West Pokot,Kacheliba,Suam,Ward
+Kenya,West Pokot,Kacheliba,Kodich,Ward
+Kenya,West Pokot,Kacheliba,Kasei,Ward
+Kenya,West Pokot,Kacheliba,Kapchok,Ward
+Kenya,West Pokot,Kacheliba,Kiwawa,Ward
+Kenya,Mombasa,Jomvu,Miritini,Ward
+Kenya,Kericho,Belgut,Chaik,Ward
+Kenya,Bungoma,Bumula,Bumula,Ward
+Kenya,Bungoma,Bumula,Khasoko,Ward
+Kenya,Samburu,Samburu West,Maralal,Ward
+Kenya,Wajir,Wajir North,Bute,Ward
+Kenya,Kitui,Kitui East,Nzambani,Ward
+Kenya,Bungoma,Bumula,West Bukusu,Ward
+Kenya,Bungoma,Kanduyi,Township,Ward
+Kenya,Bungoma,Kanduyi,Khalaba,Ward
+Kenya,Bungoma,Kanduyi,Musikoma,Ward
+Kenya,Bungoma,Kanduyi,East Sang'Alo,Ward
+Kenya,Bungoma,Kanduyi,Marakaru/Tuuti,Ward
+Kenya,Bungoma,Kanduyi,West Sang'Alo,Ward
+Kenya,Bungoma,Webuye East,Mihuu,Ward
+Kenya,Bungoma,Webuye East,Ndivisi,Ward
+Kenya,Bungoma,Webuye East,Maraka,Ward
+Kenya,Bungoma,Webuye West,Misikhu,Ward
+Kenya,Bungoma,Webuye West,Sitikho,Ward
+Kenya,Bungoma,Webuye West,Matulo,Ward
+Kenya,Tana River,Bura,Hirimani,Ward
+Kenya,Kilifi,Kilifi North,Mnarani,Ward
+Kenya,Kakamega,Mumias West,Mumias North,Ward
+Kenya,Tana River,Galole,Wayu,Ward
+Kenya,Kitui,Kitui South,Ikutha,Ward
+Kenya,Kitui,Kitui South,Athi,Ward
+Kenya,Makueni,Mbooni,Tulimani,Ward
+Kenya,Makueni,Mbooni,Mbooni,Ward
+Kenya,Makueni,Mbooni,Kithungo/Kitundu,Ward
+Kenya,Makueni,Kilome,Kasikeu,Ward
+Kenya,Makueni,Kilome,Mukaa,Ward
+Kenya,Makueni,Kilome,Kiima Kiu/Kalanzoni,Ward
+Kenya,Makueni,Kaiti,Ukia,Ward
+Kenya,Makueni,Kaiti,Kee,Ward
+Kenya,Makueni,Kaiti,Kilungu,Ward
+Kenya,Makueni,Kaiti,Ilima,Ward
+Kenya,Makueni,Makueni,Wote,Ward
+Kenya,Makueni,Makueni,Mavindini,Ward
+Kenya,Makueni,Makueni,Kitise/Kithuki,Ward
+Kenya,Makueni,Makueni,Kathonzweni,Ward
+Kenya,Makueni,Makueni,Nzaui/Kilili/Kalamba,Ward
+Kenya,Makueni,Makueni,Mbitini,Ward
+Kenya,Makueni,Kibwezi West,Makindu,Ward
+Kenya,Makueni,Kibwezi West,Nguumo,Ward
+Kenya,Makueni,Kibwezi West,Kikumbulyu North,Ward
+Kenya,Makueni,Kibwezi West,Kikumbulyu South,Ward
+Kenya,Makueni,Kibwezi West,Nguu/Masumba,Ward
+Kenya,Kakamega,Mumias West,Etenje,Ward
+Kenya,Kakamega,Mumias West,Musanda,Ward
+Kenya,Taita Taveta,Taveta,Bomani,Ward
+Kenya,Taita Taveta,Taveta,Mboghoni,Ward
+Kenya,Taita Taveta,Voi,Kasigau,Ward
+Kenya,Garissa,Fafi,Jarajila,Ward
+Kenya,Garissa,Fafi,Fafi,Ward
+Kenya,Wajir,Wajir North,Korondile,Ward
+Kenya,Wajir,Eldas,Elnur/Tula Tula,Ward
+Kenya,Mandera,Mandera West,Takaba South,Ward
+Kenya,Mandera,Mandera West,Takaba,Ward
+Kenya,Wajir,Wajir South,Benane,Ward
+Kenya,Wajir,Wajir South,Burder,Ward
+Kenya,Kilifi,Kilifi South,Junju,Ward
+Kenya,Kakamega,Matungu,Mayoni,Ward
+Kenya,Kakamega,Matungu,Namamali,Ward
+Kenya,Kakamega,Butere,Marama West,Ward
+Kenya,Kakamega,Butere,Marama Central,Ward
+Kenya,Kakamega,Butere,Marama North,Ward
+Kenya,Kakamega,Butere,Marama South,Ward
+Kenya,Kakamega,Khwisero,Kisa East,Ward
+Kenya,Kakamega,Khwisero,Kisa West,Ward
+Kenya,Kakamega,Khwisero,Kisa Central,Ward
+Kenya,Kakamega,Shinyalu,Isukha North,Ward
+Kenya,Kakamega,Shinyalu,Murhanda,Ward
+Kenya,Kakamega,Shinyalu,Isukha Central,Ward
+Kenya,Kakamega,Shinyalu,Isukha South,Ward
+Kenya,Kakamega,Shinyalu,Isukha East,Ward
+Kenya,Kakamega,Shinyalu,Isukha West,Ward
+Kenya,Kakamega,Ikolomani,Idakho South,Ward
+Kenya,Kakamega,Ikolomani,Idakho East,Ward
+Kenya,Kakamega,Ikolomani,Idakho North,Ward
+Kenya,Kakamega,Ikolomani,Idakho Central,Ward
+Kenya,Busia,Teso North,Malaba Central,Ward
+Kenya,Busia,Teso North,Malaba North,Ward
+Kenya,Busia,Teso North,Ang'Urai South,Ward
+Kenya,Busia,Teso North,Ang'Urai North,Ward
+Kenya,Busia,Teso North,Ang'Urai East,Ward
+Kenya,Busia,Teso North,Malaba South,Ward
+Kenya,Busia,Teso South,Ang'Orom,Ward
+Kenya,Busia,Teso South,Chakol South,Ward
+Kenya,Busia,Teso South,Chakol North,Ward
+Kenya,Busia,Teso South,Amukura West,Ward
+Kenya,Busia,Teso South,Amukura East,Ward
+Kenya,Nyandarua,Kipipiri,Githioro,Ward
+Kenya,Kitui,Kitui Rural,Mbitini,Ward
+Kenya,Nyandarua,Ol Kalou,Kanjuiri Range,Ward
+Kenya,Busia,Teso South,Amukura Central,Ward
+Kenya,Kitui,Kitui East,Zombe/Mwitika,Ward
+Kenya,Marsabit,Moyale,Moyale Township,Ward
+Kenya,Marsabit,Moyale,Uran,Ward
+Kenya,Marsabit,Moyale,Obbu,Ward
+Kenya,Marsabit,North Horr,Dukana,Ward
+Kenya,Marsabit,North Horr,Maikona,Ward
+Kenya,Mandera,Mandera South,Wargadud,Ward
+Kenya,Nyandarua,Ol Kalou,Rurii,Ward
+Kenya,Tana River,Bura,Chewele,Ward
+Kenya,Marsabit,Saku,Karare,Ward
+Kenya,Marsabit,Saku,Marsabit Central,Ward
+Kenya,Marsabit,Laisamis,Loiyangalani,Ward
+Kenya,Tana River,Bura,Madogo,Ward
+Kenya,Busia,Matayos,Mayenje,Ward
+Kenya,Busia,Butula,Marachi West,Ward
+Kenya,Nyeri,Othaya,Karima,Ward
+Kenya,Nyeri,Mukurweini,Gikondi,Ward
+Kenya,Nyeri,Mukurweini,Rugi,Ward
+Kenya,Nyeri,Mukurweini,Mukurwe-Ini West,Ward
+Kenya,Nyeri,Mukurweini,Mukurwe-Ini Central,Ward
+Kenya,Nyeri,Nyeri Town,Kiganjo/Mathari,Ward
+Kenya,Nyeri,Nyeri Town,Rware,Ward
+Kenya,Nyeri,Nyeri Town,Gatitu/Muruguru,Ward
+Kenya,Nyeri,Nyeri Town,Kamakwa/Mukaro,Ward
+Kenya,Kirinyaga,Mwea,Mutithi,Ward
+Kenya,Kirinyaga,Mwea,Kangai,Ward
+Kenya,Kirinyaga,Mwea,Thiba,Ward
+Kenya,Kirinyaga,Mwea,Wamumu,Ward
+Kenya,Kirinyaga,Mwea,Nyangati,Ward
+Kenya,Kirinyaga,Mwea,Murinduko,Ward
+Kenya,Kirinyaga,Mwea,Gathigiriri,Ward
+Kenya,Kirinyaga,Mwea,Tebere,Ward
+Kenya,Kirinyaga,Gichugu,Kabare,Ward
+Kenya,Kirinyaga,Gichugu,Baragwi,Ward
+Kenya,Kirinyaga,Gichugu,Ngariama,Ward
+Kenya,Kirinyaga,Gichugu,Karumandi,Ward
+Kenya,Kirinyaga,Ndia,Mukure,Ward
+Kenya,Kirinyaga,Ndia,Kiine,Ward
+Kenya,Kirinyaga,Ndia,Kariti,Ward
+Kenya,Busia,Butula,Marachi East,Ward
+Kenya,Busia,Butula,Marachi North,Ward
+Kenya,Busia,Butula,Elugulu,Ward
+Kenya,Busia,Funyula,Namboboto Nambuku,Ward
+Kenya,Busia,Funyula,Nangina,Ward
+Kenya,Busia,Funyula,Ageng'A Nanguba,Ward
+Kenya,Busia,Funyula,Bwiri,Ward
+Kenya,Murang'a,Mathioya,Kiru,Ward
+Kenya,Murang'a,Mathioya,Kamacharia,Ward
+Kenya,Murang'a,Kiharu,Wangu,Ward
+Kenya,Murang'a,Kiharu,Mugoiri,Ward
+Kenya,Murang'a,Kiharu,Mbiri,Ward
+Kenya,Murang'a,Kiharu,Township,Ward
+Kenya,Murang'a,Kiharu,Murarandia,Ward
+Kenya,Nakuru,Molo,Elburgon,Ward
+Kenya,Nakuru,Njoro,Njoro,Ward
+Kenya,Nakuru,Naivasha,Biashara,Ward
+Kenya,Nakuru,Naivasha,Hells Gate,Ward
+Kenya,Murang'a,Kiharu,Gaturi,Ward
+Kenya,Murang'a,Kigumo,Kahumbu,Ward
+Kenya,Nakuru,Kuresoi South,Amalo,Ward
+Kenya,Nakuru,Kuresoi South,Keringet,Ward
+Kenya,Nakuru,Kuresoi South,Kiptagich,Ward
+Kenya,Nakuru,Kuresoi South,Tinet,Ward
+Kenya,Turkana,Turkana North,Kaeris,Ward
+Kenya,Turkana,Turkana North,Lapur,Ward
+Kenya,Turkana,Turkana North,Kaaleng/Kaikor,Ward
+Kenya,Murang'a,Kigumo,Muthithi,Ward
+Kenya,Murang'a,Kigumo,Kigumo,Ward
+Kenya,Murang'a,Kigumo,Kangari,Ward
+Kenya,Murang'a,Kigumo,Kinyona,Ward
+Kenya,Murang'a,Maragwa,Kimorori/Wempa,Ward
+Kenya,Murang'a,Maragwa,Makuyu,Ward
+Kenya,Murang'a,Maragwa,Kambiti,Ward
+Kenya,Murang'a,Maragwa,Ichagaki,Ward
+Kenya,Murang'a,Maragwa,Nginda,Ward
+Kenya,Murang'a,Kandara,Ng'Araria,Ward
+Kenya,Murang'a,Kandara,Muruka,Ward
+Kenya,Murang'a,Kandara,Kagundu-Ini,Ward
+Kenya,Murang'a,Kandara,Gaichanjiru,Ward
+Kenya,Murang'a,Kandara,Ithiru,Ward
+Kenya,Murang'a,Kandara,Ruchu,Ward
+Kenya,Murang'a,Gatanga,Ithanga,Ward
+Kenya,Murang'a,Gatanga,Kakuzi/Mitubiri,Ward
+Kenya,Busia,Butula,Kingandole,Ward
+Kenya,Nyandarua,Ndaragwa,Leshau/Pondo,Ward
+Kenya,Turkana,Turkana West,Lopur,Ward
+Kenya,Turkana,Turkana West,Letea,Ward
+Kenya,Turkana,Turkana West,Songot,Ward
+Kenya,Murang'a,Gatanga,Mugumo-Ini,Ward
+Kenya,Murang'a,Gatanga,Kihumbu-Ini,Ward
+Kenya,Murang'a,Gatanga,Gatanga,Ward
+Kenya,Murang'a,Gatanga,Kariara,Ward
+Kenya,Uasin Gishu,Soy,Moi's Bridge,Ward
+Kenya,Garissa,Ijara,Masalani,Ward
+Kenya,Uasin Gishu,Soy,Kapkures,Ward
+Kenya,Uasin Gishu,Soy,Ziwa,Ward
+Kenya,Uasin Gishu,Soy,Soy,Ward
+Kenya,Uasin Gishu,Soy,Kuinet/Kapsuswa,Ward
+Kenya,Uasin Gishu,Turbo,Ngenyilel,Ward
+Kenya,Uasin Gishu,Turbo,Tapsagoi,Ward
+Kenya,Uasin Gishu,Turbo,Kamagut,Ward
+Kenya,Uasin Gishu,Turbo,Kiplombe,Ward
+Kenya,Uasin Gishu,Turbo,Kapsaos,Ward
+Kenya,Uasin Gishu,Turbo,Huruma,Ward
+Kenya,Wajir,Wajir North,Gurar,Ward
+Kenya,Kitui,Mwingi Central,Waita,Ward
+Kenya,Kitui,Kitui West,Kauwi,Ward
+Kenya,Kitui,Kitui West,Matinyani,Ward
+Kenya,Nyeri,Mathira,Karatina Town,Ward
+Kenya,Nyeri,Othaya,Mahiga,Ward
+Kenya,Kitui,Kitui East,Voo/Kyamatu,Ward
+Kenya,Kitui,Kitui East,Endau/Malalani,Ward
+Kenya,Kitui,Kitui South,Ikanga/Kyatune,Ward
+Kenya,Makueni,Kibwezi West,Emali/Mulala,Ward
+Kenya,Makueni,Kibwezi East,Masongaleni,Ward
+Kenya,Makueni,Kibwezi East,Mtito Andei,Ward
+Kenya,Makueni,Kibwezi East,Thange,Ward
+Kenya,Makueni,Kibwezi East,Ivingoni/Nzambani,Ward
+Kenya,Nyandarua,Kinangop,Engineer,Ward
+Kenya,Nyandarua,Kinangop,Gathara,Ward
+Kenya,Nyandarua,Kinangop,North Kinangop,Ward
+Kenya,Nyandarua,Kinangop,Murungaru,Ward
+Kenya,Nyandarua,Kipipiri,Wanjohi,Ward
+Kenya,Nyandarua,Kipipiri,Kipipiri,Ward
+Kenya,Kirinyaga,Kirinyaga Central,Mutira,Ward
+Kenya,Kirinyaga,Kirinyaga Central,Kanyekini,Ward
+Kenya,Kirinyaga,Kirinyaga Central,Kerugoya,Ward
+Kenya,Kirinyaga,Kirinyaga Central,Inoi,Ward
+Kenya,Turkana,Turkana Central,Kerio Delta,Ward
+Kenya,Turkana,Turkana Central,Kang'Atotha,Ward
+Kenya,Turkana,Turkana Central,Kalokol,Ward
+Kenya,Nairobi,Ruaraka,Mathare North,Ward
+Kenya,Busia,Butula,Marachi Central,Ward
+Kenya,Busia,Budalangi,Bunyala Central,Ward
+Kenya,Nairobi,Embakasi South,Imara Daima,Ward
+Kenya,Uasin Gishu,Moiben,Tembelio,Ward
+Kenya,Uasin Gishu,Moiben,Sergoit,Ward
+Kenya,Uasin Gishu,Moiben,Karuna/Meibeki,Ward
+Kenya,Uasin Gishu,Moiben,Moiben,Ward
+Kenya,Uasin Gishu,Moiben,Kimumu,Ward
+Kenya,Uasin Gishu,Ainabkoi,Kapsoya,Ward
+Kenya,Uasin Gishu,Ainabkoi,Kaptagat,Ward
+Kenya,Uasin Gishu,Ainabkoi,Ainabkoi/Olare,Ward
+Kenya,Uasin Gishu,Kapseret,Kipkenyo,Ward
+Kenya,Busia,Budalangi,Bunyala North,Ward
+Kenya,Busia,Budalangi,Bunyala West,Ward
+Kenya,Busia,Budalangi,Bunyala South,Ward
+Kenya,Nakuru,Molo,Mariashoni,Ward
+Kenya,Nakuru,Molo,Turi,Ward
+Kenya,Nakuru,Molo,Molo,Ward
+Kenya,Nakuru,Njoro,Mau Narok,Ward
+Kenya,Nakuru,Njoro,Mauche,Ward
+Kenya,Nakuru,Njoro,Kihingo,Ward
+Kenya,Nakuru,Njoro,Nessuit,Ward
+Kenya,Nakuru,Njoro,Lare,Ward
+Kenya,Narok,Kilgoris,Kilgoris Central,Ward
+Kenya,Nakuru,Naivasha,Lake View,Ward
+Kenya,Nakuru,Naivasha,Mai Mahiu,Ward
+Kenya,Nakuru,Naivasha,Olkaria,Ward
+Kenya,Nakuru,Naivasha,Naivasha East,Ward
+Kenya,Nakuru,Naivasha,Viwandani,Ward
+Kenya,Nakuru,Gilgil,Gilgil,Ward
+Kenya,Nakuru,Gilgil,Elementaita,Ward
+Kenya,Nakuru,Gilgil,Mbaruk/Eburu,Ward
+Kenya,Nakuru,Gilgil,Malewa West,Ward
+Kenya,Turkana,Turkana North,Kibish,Ward
+Kenya,Turkana,Turkana West,Lokichoggio,Ward
+Kenya,Turkana,Loima,Turkwel,Ward
+Kenya,Turkana,Loima,Lokiriama/Lorengippi,Ward
+Kenya,Turkana,Turkana South,Kaputir,Ward
+Kenya,Turkana,Turkana South,Lobokat,Ward
+Kenya,Turkana,Turkana South,Kalapata,Ward
+Kenya,West Pokot,Kapenguria,Kapenguria,Ward
+Kenya,West Pokot,Kapenguria,Mnagei,Ward
+Kenya,West Pokot,Kapenguria,Siyoi,Ward
+Kenya,West Pokot,Kapenguria,Endugh,Ward
+Kenya,West Pokot,Kapenguria,Sook,Ward
+Kenya,West Pokot,Sigor,Sekerr,Ward
+Kenya,West Pokot,Sigor,Masool,Ward
+Kenya,Wajir,Wajir North,Danaba,Ward
+Kenya,West Pokot,Sigor,Lomut,Ward
+Kenya,Narok,Narok North,Olorropil,Ward
+Kenya,Narok,Narok North,Melili,Ward
+Kenya,Narok,Narok East,Mosiro,Ward
+Kenya,Narok,Narok East,Ildamat,Ward
+Kenya,Narok,Narok East,Keekonyokie,Ward
+Kenya,Narok,Narok East,Suswa,Ward
+Kenya,Narok,Narok South,Ololulung'A,Ward
+Kenya,Narok,Narok South,Melelo,Ward
+Kenya,Narok,Narok South,Loita,Ward
+Kenya,Narok,Narok South,Sogoo,Ward
+Kenya,Narok,Narok South,Sagamian,Ward
+Kenya,Narok,Narok West,Mara,Ward
+Kenya,Narok,Narok West,Siana,Ward
+Kenya,Samburu,Samburu West,Loosuk,Ward
+Kenya,Samburu,Samburu North,El-Barta,Ward
+Kenya,Samburu,Samburu North,Nachola,Ward
+Kenya,Samburu,Samburu North,Ndoto,Ward
+Kenya,Samburu,Samburu North,Nyiro,Ward
+Kenya,Samburu,Samburu North,Baawa,Ward
+Kenya,Samburu,Samburu East,Waso,Ward
+Kenya,Samburu,Samburu East,Wamba West,Ward
+Kenya,Samburu,Samburu East,Wamba East,Ward
+Kenya,Samburu,Samburu East,Wamba North,Ward
+Kenya,Trans Nzoia,Kwanza,Kapomboi,Ward
+Kenya,Trans Nzoia,Kwanza,Kwanza,Ward
+Kenya,Kilifi,Rabai,Mwawesa,Ward
+Kenya,Trans Nzoia,Endebess,Chepchoina,Ward
+Kenya,Trans Nzoia,Endebess,Endebess,Ward
+Kenya,Trans Nzoia,Endebess,Matumbei,Ward
+Kenya,Trans Nzoia,Saboti,Kinyoro,Ward
+Kenya,Trans Nzoia,Saboti,Matisi,Ward
+Kenya,Mombasa,Kisauni,Mjambere,Ward
+Kenya,Narok,Narok West,Naikarra,Ward
+Kenya,Kiambu,Githunguri,Githiga,Ward
+Kenya,Kiambu,Githunguri,Ikinu,Ward
+Kenya,Kiambu,Githunguri,Ngewa,Ward
+Kenya,Kiambu,Githunguri,Komothai,Ward
+Kenya,Kiambu,Kiambu,Ting'Ang'A,Ward
+Kenya,Kiambu,Kiambu,Ndumberi,Ward
+Kenya,Kiambu,Kiambu,Riabai,Ward
+Kenya,Kiambu,Kiambaa,Cianda,Ward
+Kenya,Kiambu,Kiambaa,Karuri,Ward
+Kenya,Kiambu,Kiambaa,Ndenderu,Ward
+Kenya,Kiambu,Kiambaa,Muchatha,Ward
+Kenya,Kiambu,Kiambaa,Kihara,Ward
+Kenya,Nakuru,Kuresoi North,Kiptororo,Ward
+Kenya,Nakuru,Kuresoi North,Nyota,Ward
+Kenya,Nakuru,Kuresoi North,Sirikwa,Ward
+Kenya,Kiambu,Kabete,Gitaru,Ward
+Kenya,Kiambu,Kabete,Muguga,Ward
+Kenya,Kiambu,Kabete,Nyadhuna,Ward
+Kenya,Kiambu,Kabete,Kabete,Ward
+Kenya,Trans Nzoia,Kiminini,Kiminini,Ward
+Kenya,Trans Nzoia,Kiminini,Waitaluk,Ward
+Kenya,Trans Nzoia,Kiminini,Sirende,Ward
+Kenya,Nakuru,Subukia,Subukia,Ward
+Kenya,Wajir,Wajir South,Ibrahim Ure,Ward
+Kenya,Nakuru,Rongai,Menengai West,Ward
+Kenya,Kiambu,Lari,Kinale,Ward
+Kenya,Kiambu,Lari,Nyanduma,Ward
+Kenya,Kiambu,Lari,Kamburu,Ward
+Kenya,Kiambu,Lari,Lari/Kirenga,Ward
+Kenya,Kiambu,Gatundu South,Kiamwangi,Ward
+Kenya,Kiambu,Gatundu South,Kiganjo,Ward
+Kenya,Kiambu,Gatundu South,Ndarugu,Ward
+Kenya,Kiambu,Gatundu South,Ngenda,Ward
+Kenya,Kiambu,Gatundu North,Gituamba,Ward
+Kenya,Kiambu,Gatundu North,Githobokoni,Ward
+Kenya,Kiambu,Gatundu North,Chania,Ward
+Kenya,Kiambu,Gatundu North,Mang'U,Ward
+Kenya,Kiambu,Juja,Murera,Ward
+Kenya,Kiambu,Juja,Theta,Ward
+Kenya,Nakuru,Rongai,Visoi,Ward
+Kenya,Kiambu,Juja,Juja,Ward
+Kenya,Kiambu,Juja,Witeithie,Ward
+Kenya,Kiambu,Juja,Kalimoni,Ward
+Kenya,Kiambu,Thika Town,Kamenu,Ward
+Kenya,Kiambu,Thika Town,Hospital,Ward
+Kenya,Nakuru,Bahati,Dundori,Ward
+Kenya,Kilifi,Rabai,Ruruma,Ward
+Kenya,Trans Nzoia,Cherangany,Makutano,Ward
+Kenya,Trans Nzoia,Cherangany,Kaplamai,Ward
+Kenya,Trans Nzoia,Cherangany,Motosiet,Ward
+Kenya,Trans Nzoia,Cherangany,Cherangany/Suwerwa,Ward
+Kenya,Trans Nzoia,Cherangany,Chepsiro/Kiptoror,Ward
+Kenya,Mombasa,Kisauni,Magogoni,Ward
+Kenya,Siaya,Rarieda,North Uyoma,Ward
+Kenya,Siaya,Rarieda,South Uyoma,Ward
+Kenya,Siaya,Rarieda,West Uyoma,Ward
+Kenya,Kwale,Msambweni,Ukunda,Ward
+Kenya,Kwale,Msambweni,Kinondo,Ward
+Kenya,Kwale,Msambweni,Ramisi,Ward
+Kenya,Kwale,Lungalunga,Dzombo,Ward
+Kenya,Kwale,Lungalunga,Mwereni,Ward
+Kenya,Kwale,Lungalunga,Vanga,Ward
+Kenya,Nakuru,Bahati,Kabatini,Ward
+Kenya,Kwale,Matuga,Tsimba Golini,Ward
+Kenya,Nakuru,Kuresoi North,Kamara,Ward
+Kenya,Kwale,Matuga,Tiwi,Ward
+Kenya,Kwale,Matuga,Kubo South,Ward
+Kenya,Nakuru,Subukia,Waseges,Ward
+Kenya,Nakuru,Subukia,Kabazi,Ward
+Kenya,Elgeyo-Marakwet,Marakwet East,Kapyego,Ward
+Kenya,Elgeyo-Marakwet,Marakwet East,Sambirir,Ward
+Kenya,Kwale,Matuga,Mkongani,Ward
+Kenya,Kwale,Kinango,Ndavaya,Ward
+Kenya,Kwale,Kinango,Puma,Ward
+Kenya,Kwale,Kinango,Kinango,Ward
+Kenya,Kwale,Kinango,Chengoni/Samburu,Ward
+Kenya,Kwale,Kinango,Mwavumbo,Ward
+Kenya,Nakuru,Bahati,Kiamaina,Ward
+Kenya,Kiambu,Thika Town,Gatuanyaga,Ward
+Kenya,Kiambu,Thika Town,Ngoliba,Ward
+Kenya,Kiambu,Ruiru,Gitothua,Ward
+Kenya,Taita Taveta,Taveta,Mahoo,Ward
+Kenya,Bomet,Konoin,Kimulot,Ward
+Kenya,Bomet,Konoin,Mogogosiek,Ward
+Kenya,Bomet,Konoin,Boito,Ward
+Kenya,Bomet,Konoin,Embomos,Ward
+Kenya,Kisii,Bomachoge Borabu,Bombaba Borabu,Ward
+Kenya,Nakuru,Rongai,Soin,Ward
+Kenya,Nandi,Aldai,Kemeloi-Maraba,Ward
+Kenya,Nandi,Aldai,Kobujoi,Ward
+Kenya,Nandi,Nandi Hills,Nandi Hills,Ward
+Kenya,Nandi,Nandi Hills,Chepkunyuk,Ward
+Kenya,Taita Taveta,Wundanyi,Mwanda/Mgange,Ward
+Kenya,Taita Taveta,Mwatate,Mwatate,Ward
+Kenya,Taita Taveta,Mwatate,Wusi/Kishamba,Ward
+Kenya,Embu,Mbeere North,Muminji,Ward
+Kenya,Embu,Mbeere North,Evurore,Ward
+Kenya,Nakuru,Bahati,Lanet/Umoja,Ward
+Kenya,Nandi,Emgwen,Chepkumia,Ward
+Kenya,Nakuru,Bahati,Bahati,Ward
+Kenya,Nakuru,Nakuru Town West,Kaptembwo,Ward
+Kenya,Nyeri,Mathira,Iriaini,Ward
+Kenya,Nyeri,Mathira,Konyu,Ward
+Kenya,Nandi,Emgwen,Kapsabet,Ward
+Kenya,Nandi,Emgwen,Kilibwoni,Ward
+Kenya,Mombasa,Nyali,Frere Town,Ward
+Kenya,Nyeri,Mathira,Kirimukuyu,Ward
+Kenya,Nakuru,Nakuru Town West,Kapkures,Ward
+Kenya,Samburu,Samburu West,Suguta Marmar,Ward
+Kenya,Nakuru,Nakuru Town West,Rhoda,Ward
+Kenya,Nakuru,Nakuru Town West,Shaabab,Ward
+Kenya,Elgeyo-Marakwet,Keiyo South,Soy North,Ward
+Kenya,Elgeyo-Marakwet,Keiyo South,Soy South,Ward
+Kenya,Nakuru,Nakuru Town East,Biashara,Ward
+Kenya,Nandi,Aldai,Kabwareng,Ward
+Kenya,Nandi,Mosop,Ndalat,Ward
+Kenya,Nakuru,Nakuru Town East,Kivumbini,Ward
+Kenya,Nakuru,Nakuru Town East,Flamingo,Ward
+Kenya,Nakuru,Nakuru Town East,Menengai,Ward
+Kenya,Baringo,Tiaty,Tirioko,Ward
+Kenya,Baringo,Tiaty,Kolowa,Ward
+Kenya,Baringo,Tiaty,Ribkwo,Ward
+Kenya,Baringo,Tiaty,Silale,Ward
+Kenya,Mombasa,Nyali,Kongowea,Ward
+Kenya,Laikipia,Laikipia West,Marmanet,Ward
+Kenya,Laikipia,Laikipia West,Igwamiti,Ward
+Kenya,Laikipia,Laikipia West,Salama,Ward
+Kenya,Laikipia,Laikipia East,Ngobit,Ward
+Kenya,Laikipia,Laikipia East,Tigithi,Ward
+Kenya,Laikipia,Laikipia East,Thingithu,Ward
+Kenya,Laikipia,Laikipia East,Nanyuki,Ward
+Kenya,Mombasa,Mvita,Tudor,Ward
+Kenya,Nakuru,Rongai,Mosop,Ward
+Kenya,Nakuru,Rongai,Solai,Ward
+Kenya,Taita Taveta,Wundanyi,Werugha,Ward
+Kenya,Nakuru,Nakuru Town West,Barut,Ward
+Kenya,Nakuru,Nakuru Town West,London,Ward
+Kenya,Mombasa,Changamwe,Chaani,Ward
+Kenya,Kajiado,Kajiado North,Olkeri,Ward
+Kenya,Kajiado,Kajiado North,Ongata Rongai,Ward
+Kenya,Kajiado,Kajiado North,Nkaimurunya,Ward
+Kenya,Kajiado,Kajiado North,Oloolua,Ward
+Kenya,Kajiado,Kajiado North,Ngong,Ward
+Kenya,Kajiado,Kajiado Central,Purko,Ward
+Kenya,Kajiado,Kajiado Central,Ildamat,Ward
+Kenya,Kajiado,Kajiado Central,Dalalekutuk,Ward
+Kenya,Kajiado,Kajiado Central,Matapato North,Ward
+Kenya,Kajiado,Kajiado Central,Matapato South,Ward
+Kenya,Kajiado,Kajiado East,Kaputiei North,Ward
+Kenya,Kajiado,Kajiado East,Kitengela,Ward
+Kenya,Kajiado,Kajiado East,Oloosirkon/Sholinke,Ward
+Kenya,Kajiado,Kajiado East,Kenyawa-Poka,Ward
+Kenya,Kajiado,Kajiado East,Imaroro,Ward
+Kenya,Kajiado,Kajiado West,Keekonyokie,Ward
+Kenya,Kericho,Kipkelion West,Chilchila,Ward
+Kenya,Kericho,Ainamoi,Kapsoit,Ward
+Kenya,Kericho,Ainamoi,Ainamoi,Ward
+Kenya,Kericho,Ainamoi,Kapkugerwet,Ward
+Kenya,Kericho,Ainamoi,Kipchebor,Ward
+Kenya,Kericho,Ainamoi,Kipchimchim,Ward
+Kenya,Kericho,Ainamoi,Kapsaos,Ward
+Kenya,Kericho,Bureti,Kisiara,Ward
+Kenya,Kericho,Bureti,Tebesonik,Ward
+Kenya,Kericho,Bureti,Cheboin,Ward
+Kenya,Kericho,Bureti,Chemosot,Ward
+Kenya,Kericho,Bureti,Litein,Ward
+Kenya,Kericho,Bureti,Cheplanget,Ward
+Kenya,Kericho,Belgut,Waldai,Ward
+Kenya,Kericho,Belgut,Kabianga,Ward
+Kenya,Mombasa,Nyali,Kadzandani,Ward
+Kenya,Nakuru,Nakuru Town East,Nakuru East,Ward
+Kenya,Mombasa,Changamwe,Port Reitz,Ward
+Kenya,Kericho,Sigowet/Soin,Sigowet,Ward
+Kenya,Kericho,Sigowet/Soin,Kaplelartet,Ward
+Kenya,Kericho,Sigowet/Soin,Soliat,Ward
+Kenya,Kericho,Sigowet/Soin,Soin,Ward
+Kenya,Mombasa,Likoni,Shika Adabu,Ward
+Kenya,Mombasa,Kisauni,Junda,Ward
+Kenya,Mombasa,Kisauni,Bamburi,Ward
+Kenya,Mombasa,Kisauni,Mwakirunge,Ward
+Kenya,Mombasa,Kisauni,Mtopanga,Ward
+Kenya,Mombasa,Kisauni,Shanzu,Ward
+Kenya,Mombasa,Nyali,Ziwa La Ng'Ombe,Ward
+Kenya,Mombasa,Nyali,Mkomani,Ward
+Kenya,Mombasa,Likoni,Mtongwe,Ward
+Kenya,Taita Taveta,Voi,Mbololo,Ward
+Kenya,Mombasa,Likoni,Bofu,Ward
+Kenya,Kilifi,Kilifi North,Sokoni,Ward
+Kenya,Kilifi,Kilifi North,Dabaso,Ward
+Kenya,Kilifi,Kilifi North,Watamu,Ward
+Kenya,Kilifi,Kilifi South,Mwarakaya,Ward
+Kenya,Kilifi,Kilifi South,Chasimba,Ward
+Kenya,Kilifi,Kilifi South,Mtepeni,Ward
+Kenya,Kilifi,Kaloleni,Mariakani,Ward
+Kenya,Kilifi,Kaloleni,Kayafungo,Ward
+Kenya,Kilifi,Kaloleni,Kaloleni,Ward
+Kenya,Kilifi,Kaloleni,Mwanamwinga,Ward
+Kenya,Kilifi,Rabai,Kambe/Ribe,Ward
+Kenya,Kilifi,Ganze,Bamba,Ward
+Kenya,Kilifi,Ganze,Jaribuni,Ward
+Kenya,Kilifi,Malindi,Jilore,Ward
+Kenya,Kilifi,Malindi,Kakuyuni,Ward
+Kenya,Kilifi,Malindi,Shella,Ward
+Kenya,Kilifi,Magarini,Marafa,Ward
+Kenya,Kilifi,Magarini,Magarini,Ward
+Kenya,Siaya,Ugenya,West Ugenya,Ward
+Kenya,Siaya,Ugenya,Ukwala,Ward
+Kenya,Siaya,Ugenya,North Ugenya,Ward
+Kenya,Siaya,Ugenya,East Ugenya,Ward
+Kenya,Siaya,Ugunja,Sidindi,Ward
+Kenya,Siaya,Ugunja,Sigomere,Ward
+Kenya,Siaya,Ugunja,Ugunja,Ward
+Kenya,Siaya,Alego Usonga,Usonga,Ward
+Kenya,Siaya,Alego Usonga,West Alego,Ward
+Kenya,Siaya,Alego Usonga,Central Alego,Ward
+Kenya,Siaya,Alego Usonga,Siaya Township,Ward
+Kenya,Kwale,Msambweni,Gombato Bongwe,Ward
+Kenya,Kisumu,Kisumu West,South West Kisumu,Ward
+Kenya,Kisii,Kitutu Chache South,Nyakoe,Ward
+Kenya,Kisii,Nyaribari Chache,Kisii Central,Ward
+Kenya,Nairobi,Westlands,Parklands/Highridge,Ward
+Kenya,Nairobi,Dagoretti North,Kilimani,Ward
+Kenya,Nairobi,Dagoretti North,Kileleshwa,Ward
+Kenya,Baringo,Mogotio,Mogotio,Ward
+Kenya,Baringo,Mogotio,Emining,Ward
+Kenya,Baringo,Mogotio,Kisanana,Ward
+Kenya,Baringo,Eldama Ravine,Lembus,Ward
+Kenya,Baringo,Eldama Ravine,Lembus Kwen,Ward
+Kenya,Baringo,Eldama Ravine,Ravine,Ward
+Kenya,Baringo,Eldama Ravine,Mumberes/Maji Mazuri,Ward
+Kenya,Baringo,Eldama Ravine,Lembus/Perkerra,Ward
+Kenya,Baringo,Eldama Ravine,Koibatek,Ward
+Kenya,Laikipia,Laikipia West,Ol-Moran,Ward
+Kenya,Laikipia,Laikipia West,Rumuruti Township,Ward
+Kenya,Nairobi,Kibra,Woodley/Kenyatta Golf Cou,Ward
+Kenya,Kericho,Kipkelion East,Kedowa/Kimugul,Ward
+Kenya,Kericho,Kipkelion East,Chepseon,Ward
+Kenya,Kericho,Kipkelion East,Tendeno/Sorget,Ward
+Kenya,Kericho,Kipkelion West,Kunyak,Ward
+Kenya,Kericho,Kipkelion West,Kamasian,Ward
+Kenya,Kericho,Kipkelion West,Kipkelion,Ward
+Kenya,Mombasa,Likoni,Likoni,Ward
+Kenya,Nairobi,Roysambu,Zimmerman,Ward
+Kenya,Nairobi,Roysambu,Roysambu,Ward
+Kenya,Nairobi,Kasarani,Mwiki,Ward
+Kenya,Nairobi,Kasarani,Kasarani,Ward
+Kenya,Kisumu,Kisumu Central,Market Milimani,Ward
+Kenya,Nairobi,Ruaraka,Lucky Summer,Ward
+Kenya,Nairobi,Ruaraka,Korogocho,Ward
+Kenya,Kilifi,Kilifi North,Kibarani,Ward
+Kenya,Kilifi,Kilifi North,Matsangoni,Ward
+Kenya,Nairobi,Embakasi South,Pipeline,Ward
+Kenya,Kisumu,Kisumu Central,Kondele,Ward
+Kenya,Mombasa,Likoni,Timbwani,Ward
+Kenya,Kisumu,Kisumu Central,Nyalenda B,Ward
+Kenya,Kisumu,Seme,West Seme,Ward
+Kenya,Kisumu,Seme,Central Seme,Ward
+Kenya,Kisumu,Seme,East Seme,Ward
+Kenya,Kisumu,Seme,North Seme,Ward
+Kenya,Kisumu,Nyando,East Kano/Wawidhi,Ward
+Kenya,Kisumu,Nyando,Kobura,Ward
+Kenya,Kisumu,Muhoroni,Miwani,Ward
+Kenya,Kisumu,Muhoroni,Ombeyi,Ward
+Kenya,Kisumu,Muhoroni,Masogo/Nyang'Oma,Ward
+Kenya,Kisumu,Muhoroni,Chemelil,Ward
+Kenya,Kisumu,Nyakach,South West Nyakach,Ward
+Kenya,Kisumu,Nyakach,North Nyakach,Ward
+Kenya,Kisumu,Nyakach,Central Nyakach,Ward
+Kenya,Kisumu,Nyakach,West Nyakach,Ward
+Kenya,Kisumu,Nyakach,South East Nyakach,Ward
+Kenya,Kisumu,Nyando,Awasi/Onjiko,Ward
+Kenya,Kisumu,Nyando,Ahero,Ward
+Kenya,Nyamira,Kitutu Masaba,Rigoma,Ward
+Kenya,Nyamira,Kitutu Masaba,Gachuba,Ward
+Kenya,Nyamira,Kitutu Masaba,Magombo,Ward
+Kenya,Nyamira,Kitutu Masaba,Manga,Ward
+Kenya,Nyamira,Kitutu Masaba,Gesima,Ward
+Kenya,Nyamira,West Mugirango,Nyamaiya,Ward
+Kenya,Nyamira,West Mugirango,Bogichora,Ward
+Kenya,Nyamira,West Mugirango,Bosamaro,Ward
+Kenya,Nyamira,West Mugirango,Bonyamatuta,Ward
+Kenya,Nyamira,West Mugirango,Township,Ward
+Kenya,Nyamira,North Mugirango,Itibo,Ward
+Kenya,Nyamira,North Mugirango,Bomwagamo,Ward
+Kenya,Nyamira,North Mugirango,Bokeira,Ward
+Kenya,Nyamira,North Mugirango,Magwagwa,Ward
+Kenya,Nyamira,North Mugirango,Ekerenyo,Ward
+Kenya,Nyamira,Borabu,Mekenene,Ward
+Kenya,Nyamira,Borabu,Kiabonyoru,Ward
+Kenya,Nyamira,Borabu,Nyansiongo,Ward
+Kenya,Nyamira,Borabu,Esise,Ward
+Kenya,Kisii,Bonchari,Bomariba,Ward
+Kenya,Kisii,Bonchari,Bogiakumu,Ward
+Kenya,Kisii,Bonchari,Bomorenda,Ward
+Kenya,Kisii,Bonchari,Riana,Ward
+Kenya,Kisii,South Mugirango,Tabaka,Ward
+Kenya,Kisii,South Mugirango,Bogetenga,Ward
+Kenya,Kisii,South Mugirango,Moticho,Ward
+Kenya,Kisii,South Mugirango,Getenga,Ward
+Kenya,Kisii,Bomachoge Borabu,Bokimonge,Ward
+Kenya,Kisii,Bomachoge Borabu,Magenche,Ward
+Kenya,Kisii,Bobasi,Masige West,Ward
+Kenya,Kisii,Bobasi,Masige East,Ward
+Kenya,Kisii,Bobasi,Basi Central,Ward
+Kenya,Kisii,Bobasi,Nyacheki,Ward
+Kenya,Kisii,Bobasi,Bobasi Chache,Ward
+Kenya,Kisii,Bobasi,Bobasi Boitangare,Ward
+Kenya,Kisii,Bomachoge Chache,Majoge Basi,Ward
+Kenya,Kisii,Nyaribari Masaba,Ichuni,Ward
+Kenya,Kisii,Nyaribari Masaba,Nyamasibi,Ward
+Kenya,Kisii,Nyaribari Masaba,Masimba,Ward
+Kenya,Kisii,Nyaribari Masaba,Gesusu,Ward
+Kenya,Kisii,Nyaribari Masaba,Kiamokama,Ward
+Kenya,Kisii,Nyaribari Chache,Bobaracho,Ward
+Kenya,Kisii,Kitutu Chache South,Kitutu Central,Ward
+Kenya,Kisii,Nyaribari Chache,Keumbu,Ward
+Kenya,Kisii,Nyaribari Chache,Kiogoro,Ward
+Kenya,Kisii,Nyaribari Chache,Birongo,Ward
+Kenya,Taita Taveta,Voi,Marungu,Ward
+Kenya,Nairobi,Embakasi East,Embakasi,Ward
+Kenya,Nairobi,Embakasi East,Utawala,Ward
+Kenya,Nairobi,Embakasi East,Mihango,Ward
+Kenya,Taita Taveta,Voi,Ngolia,Ward
+Kenya,Kisii,Kitutu Chache North,Sensi,Ward
+Kenya,Nairobi,Makadara,Viwandani,Ward
+Kenya,Nairobi,Makadara,Harambee,Ward
+Kenya,Nairobi,Kamukunji,Eastleigh South,Ward
+Kenya,Elgeyo-Marakwet,Keiyo South,Kabiemit,Ward
+Kenya,Garissa,Lagdera,Maalimin,Ward
+Kenya,Garissa,Lagdera,Sabena,Ward
+Kenya,Garissa,Lagdera,Baraki,Ward
+Kenya,Nairobi,Dagoretti North,Kawangware,Ward
+Kenya,Nairobi,Starehe,Landimawe,Ward
+Kenya,Nairobi,Starehe,Nairobi South,Ward
+Kenya,Nairobi,Mathare,Huruma,Ward
+Kenya,Uasin Gishu,Soy,Kipsomba,Ward
+Kenya,Uasin Gishu,Kapseret,Megun,Ward
+Kenya,Narok,Kilgoris,Keyian,Ward
+Kenya,Narok,Kilgoris,Angata Barikoi,Ward
+Kenya,Narok,Kilgoris,Shankoe,Ward
+Kenya,Narok,Kilgoris,Kimintet,Ward
+Kenya,Narok,Kilgoris,Lolgorian,Ward
+Kenya,Narok,Emurua Dikirr,Ololmasani,Ward
+Kenya,Narok,Emurua Dikirr,Mogondo,Ward
+Kenya,Kiambu,Lari,Kijabe,Ward
+Kenya,Tharaka-Nithi,Tharaka,Gatunga,Ward
+Kenya,Tharaka-Nithi,Tharaka,Mukothima,Ward
+Kenya,Kisii,Bomachoge Borabu,Boochi Borabu,Ward
+Kenya,Tana River,Garsen,Kipini East,Ward
+Kenya,Tana River,Garsen,Garsen South,Ward
+Kenya,Mandera,Banissa,Banissa,Ward
+Kenya,Mandera,Banissa,Derkhale,Ward
+Kenya,Isiolo,Isiolo North,Chari,Ward
+Kenya,Isiolo,Isiolo North,Cherab,Ward
+Kenya,Isiolo,Isiolo North,Ngare Mara,Ward
+Kenya,Isiolo,Isiolo North,Burat,Ward
+Kenya,Isiolo,Isiolo South,Garbatulla,Ward
+Kenya,Isiolo,Isiolo South,Kinna,Ward
+Kenya,Isiolo,Isiolo South,Sericho,Ward
+Kenya,Mandera,Mandera North,Ashabito,Ward
+Kenya,Mandera,Mandera North,Guticha,Ward
+Kenya,Mandera,Mandera East,Libehia,Ward
+Kenya,Mandera,Mandera East,Khalalio,Ward
+Kenya,Mandera,Mandera East,Neboi,Ward
+Kenya,Mandera,Mandera East,Township,Ward
+Kenya,Mandera,Lafey,Sala,Ward
+Kenya,Mandera,Lafey,Fino,Ward
+Kenya,Mandera,Lafey,Lafey,Ward
+Kenya,Mandera,Lafey,Alango Gof,Ward
+Kenya,Turkana,Turkana South,Lokichar,Ward
+Kenya,Turkana,Turkana East,Kapedo/Napeitom,Ward
+Kenya,Elgeyo-Marakwet,Marakwet East,Endo,Ward
+Kenya,Elgeyo-Marakwet,Marakwet West,Lelan,Ward
+Kenya,Nairobi,Dagoretti North,Kabiro,Ward
+Kenya,Nairobi,Dagoretti South,Mutu-Ini,Ward
+Kenya,Nairobi,Dagoretti South,Ngando,Ward
+Kenya,Nairobi,Dagoretti South,Riruta,Ward
+Kenya,Nairobi,Dagoretti South,Uthiru/Ruthimitu,Ward
+Kenya,Nairobi,Dagoretti South,Waithaka,Ward
+Kenya,Nairobi,Langata,Karen,Ward
+Kenya,Baringo,Baringo Central,Sacho,Ward
+Kenya,Baringo,Baringo South,Mukutani,Ward
+Kenya,Kajiado,Kajiado South,Kimana,Ward
+Kenya,Laikipia,Laikipia East,Umande,Ward
+Kenya,Laikipia,Laikipia North,Sosian,Ward
+Kenya,Laikipia,Laikipia North,Segera,Ward
+Kenya,Laikipia,Laikipia North,Mugogodo West,Ward
+Kenya,Laikipia,Laikipia North,Mugogodo East,Ward
+Kenya,Kajiado,Kajiado West,Iloodokilani,Ward
+Kenya,Kajiado,Kajiado West,Magadi,Ward
+Kenya,Kajiado,Kajiado West,Ewuaso Oonkidong'I,Ward
+Kenya,Mombasa,Jomvu,Mikindani,Ward
+Kenya,Mombasa,Mvita,Tononoka,Ward
+Kenya,Mombasa,Mvita,Majengo,Ward
+Kenya,Kilifi,Kilifi North,Tezo,Ward
+Kenya,Taita Taveta,Mwatate,Chawia,Ward
+Kenya,Kilifi,Kilifi South,Shimo La Tewa,Ward
+Kenya,Kilifi,Rabai,Rabai/Kisurutini,Ward
+Kenya,Kilifi,Ganze,Ganze,Ward
+Kenya,Kilifi,Ganze,Sokoke,Ward
+Kenya,Kilifi,Malindi,Ganda,Ward
+Kenya,Kilifi,Malindi,Malindi Town,Ward
+Kenya,Kilifi,Magarini,Gongoni,Ward
+Kenya,Kilifi,Magarini,Adu,Ward
+Kenya,Kilifi,Magarini,Garashi,Ward
+Kenya,Kilifi,Magarini,Sabaki,Ward
+Kenya,Siaya,Alego Usonga,North Alego,Ward
+Kenya,Siaya,Alego Usonga,South East Alego,Ward
+Kenya,Siaya,Gem,North Gem,Ward
+Kenya,Siaya,Gem,West Gem,Ward
+Kenya,Siaya,Gem,Central Gem,Ward
+Kenya,Siaya,Gem,Yala Township,Ward
+Kenya,Siaya,Gem,East Gem,Ward
+Kenya,Siaya,Gem,South Gem,Ward
+Kenya,Siaya,Bondo,West Yimbo,Ward
+Kenya,Siaya,Bondo,Central Sakwa,Ward
+Kenya,Siaya,Bondo,South Sakwa,Ward
+Kenya,Siaya,Bondo,Yimbo East,Ward
+Kenya,Siaya,Bondo,West Sakwa,Ward
+Kenya,Siaya,Bondo,North Sakwa,Ward
+Kenya,Siaya,Rarieda,East Asembo,Ward
+Kenya,Siaya,Rarieda,West Asembo,Ward
+Kenya,Kisumu,Kisumu East,Kajulu,Ward
+Kenya,Kisumu,Kisumu East,Kolwa East,Ward
+Kenya,Kisumu,Kisumu East,Kolwa Central,Ward
+Kenya,Kisumu,Kisumu West,Central Kisumu,Ward
+Kenya,Taita Taveta,Voi,Kaloleni,Ward
+Kenya,Kisumu,Kisumu West,West Kisumu,Ward
+Kenya,Kisumu,Kisumu West,North West Kisumu,Ward
+Kenya,Kisumu,Kisumu Central,Railways,Ward
+Kenya,Kisumu,Kisumu Central,Migosi,Ward
+Kenya,Kisii,Nyaribari Chache,Ibeno,Ward
+Kenya,Kisii,Kitutu Chache North,Monyerero,Ward
+Kenya,Kisii,Kitutu Chache North,Marani,Ward
+Kenya,Kisii,Kitutu Chache North,Kegogi,Ward
+Kenya,Kisii,Kitutu Chache South,Bogusero,Ward
+Kenya,Kisii,Kitutu Chache South,Bogeka,Ward
+Kenya,Kisii,Kitutu Chache South,Nyatieko,Ward
+Kenya,Nairobi,Westlands,Karura,Ward
+Kenya,Nairobi,Westlands,Kangemi,Ward
+Kenya,Nairobi,Westlands,Mountain View,Ward
+Kenya,Nairobi,Dagoretti North,Gatina,Ward
+Kenya,Nandi,Mosop,Sangalo/Kebulonik,Ward
+Kenya,Baringo,Tiaty,Tangulbei/Korossi,Ward
+Kenya,Nairobi,Langata,Nairobi West,Ward
+Kenya,Nairobi,Langata,Mugumu-Ini,Ward
+Kenya,Baringo,Tiaty,Churo/Amaya,Ward
+Kenya,Baringo,Baringo North,Barwessa,Ward
+Kenya,Baringo,Baringo North,Kabartonjo,Ward
+Kenya,Baringo,Baringo North,Saimo/Soi,Ward
+Kenya,Baringo,Baringo North,Bartabwa,Ward
+Kenya,Baringo,Baringo Central,Kabarnet,Ward
+Kenya,Nairobi,Langata,South C,Ward
+Kenya,Baringo,Baringo Central,Tenges,Ward
+Kenya,Baringo,Baringo Central,Ewalel/Chapchap,Ward
+Kenya,Baringo,Baringo Central,Kapropita,Ward
+Kenya,Baringo,Baringo South,Marigat,Ward
+Kenya,Baringo,Baringo South,Mochongoi,Ward
+Kenya,Nairobi,Langata,Nyayo Highrise,Ward
+Kenya,Nairobi,Kibra,Laini Saba,Ward
+Kenya,Kajiado,Kajiado West,Mosiro,Ward
+Kenya,Kajiado,Kajiado South,Kuku,Ward
+Kenya,Kajiado,Kajiado South,Rombo,Ward
+Kenya,Nairobi,Kibra,Lindi,Ward
+Kenya,Kericho,Kipkelion East,Londiani,Ward
+Kenya,Nairobi,Kibra,Makina,Ward
+Kenya,Nairobi,Roysambu,Githurai,Ward
+Kenya,Nairobi,Roysambu,Kahawa West,Ward
+Kenya,Nairobi,Roysambu,Kahawa,Ward
+Kenya,Nairobi,Kasarani,Clay City,Ward
+Kenya,Nairobi,Kasarani,Njiru,Ward
+Kenya,Nairobi,Kasarani,Ruai,Ward
+Kenya,Nairobi,Ruaraka,Utalii,Ward
+Kenya,Nairobi,Embakasi South,Kwa Njenga,Ward
+Kenya,Nairobi,Embakasi North,Dandora Area Iv,Ward
+Kenya,Nairobi,Embakasi South,Kwa Reuben,Ward
+Kenya,Nairobi,Embakasi West,Umoja I,Ward
+Kenya,Nairobi,Embakasi South,Kware,Ward
+Kenya,Nairobi,Embakasi North,Kariobangi North,Ward
+Kenya,Nairobi,Embakasi North,Dandora Area I,Ward
+Kenya,Nairobi,Embakasi North,Dandora Area Ii,Ward
+Kenya,Nairobi,Embakasi North,Dandora Area Iii,Ward
+Kenya,Nairobi,Embakasi Central,Kayole North,Ward
+Kenya,Nairobi,Embakasi Central,Kayole Central,Ward
+Kenya,Nairobi,Embakasi West,Umoja Ii,Ward
+Kenya,Nairobi,Embakasi Central,Kayole South,Ward
+Kenya,Nairobi,Makadara,Makongeni,Ward
+Kenya,Nairobi,Embakasi Central,Komarock,Ward
+Kenya,Nairobi,Embakasi Central,Matopeni/Spring Valley,Ward
+Kenya,Nairobi,Kamukunji,Eastleigh North,Ward
+Kenya,Nairobi,Embakasi West,Mowlem,Ward
+Kenya,Nairobi,Embakasi West,Kariobangi South,Ward
+Kenya,Nairobi,Makadara,Maringo/Hamza,Ward
+Kenya,Trans Nzoia,Kiminini,Nabiswa,Ward
+Kenya,Nairobi,Kamukunji,California,Ward
+Kenya,Nairobi,Kamukunji,Pumwani,Ward
+Kenya,Trans Nzoia,Cherangany,Sinyerere,Ward
+Kenya,Nairobi,Kamukunji,Airbase,Ward
+Kenya,Garissa,Garissa Township,Iftin,Ward
+Kenya,Nairobi,Starehe,Nairobi Central,Ward
+Kenya,Garissa,Dadaab,Dertu,Ward
+Kenya,Garissa,Dadaab,Dadaab,Ward
+Kenya,Garissa,Dadaab,Damajale,Ward
+Kenya,Garissa,Dadaab,Liboi,Ward
+Kenya,Garissa,Dadaab,Abakaile,Ward
+Kenya,Nandi,Aldai,Terik,Ward
+Kenya,Nairobi,Starehe,Ngara,Ward
+Kenya,Nairobi,Starehe,Pangani,Ward
+Kenya,Nairobi,Starehe,Ziwani/Kariokor,Ward
+Kenya,Nairobi,Mathare,Hospital,Ward
+Kenya,Nairobi,Mathare,Mabatini,Ward
+Kenya,Nairobi,Mathare,Mlango Kubwa,Ward
+Kenya,Nairobi,Mathare,Kiamaiko,Ward
+Kenya,Nairobi,Westlands,Kitisuru,Ward
+Kenya,Murang'a,Kangema,Kanyenya-Ini,Ward
+Kenya,Murang'a,Kangema,Muguru,Ward
+Kenya,Murang'a,Kangema,Rwathia,Ward
+Kenya,Murang'a,Mathioya,Gitugi,Ward
+Kenya,Wajir,Wajir East,Wagberi,Ward
+Kenya,Uasin Gishu,Kapseret,Ngeria,Ward
+Kenya,Uasin Gishu,Kapseret,Langas,Ward
+Kenya,Wajir,Eldas,Eldas,Ward
+Kenya,Uasin Gishu,Kesses,Racecourse,Ward
+Kenya,Uasin Gishu,Kesses,Cheptiret/Kipchamo,Ward
+Kenya,Uasin Gishu,Kesses,Tarakwa,Ward
+Kenya,Garissa,Fafi,Bura,Ward
+Kenya,Narok,Emurua Dikirr,Kapsasian,Ward
+Kenya,Narok,Narok North,Olokurto,Ward
+Kenya,Narok,Narok North,Narok Town,Ward
+Kenya,Narok,Narok North,Nkareta,Ward
+Kenya,Wajir,Eldas,Della,Ward
+Kenya,Wajir,Wajir South,Dadaja Bulla,Ward
+Kenya,Wajir,Wajir South,Habasswein,Ward
+Kenya,Kiambu,Kabete,Uthiru,Ward
+Kenya,Kiambu,Kikuyu,Karai,Ward
+Kenya,Kiambu,Kikuyu,Nachu,Ward
+Kenya,Kiambu,Kikuyu,Sigona,Ward
+Kenya,Kiambu,Kikuyu,Kikuyu,Ward
+Kenya,Kiambu,Kikuyu,Kinoo,Ward
+Kenya,Kiambu,Limuru,Bibirioni,Ward
+Kenya,Kiambu,Limuru,Limuru Central,Ward
+Kenya,Kiambu,Limuru,Ndeiya,Ward
+Kenya,Kiambu,Limuru,Limuru East,Ward
+Kenya,Kiambu,Limuru,Ngecha Tigoni,Ward
+Kenya,Garissa,Fafi,Dekaharia,Ward
+Kenya,Wajir,Wajir South,Diif,Ward
+Kenya,Kiambu,Ruiru,Biashara,Ward
+Kenya,Tharaka-Nithi,Tharaka,Nkondi,Ward
+Kenya,Embu,Manyatta,Kithimu,Ward
+Kenya,Embu,Manyatta,Nginda,Ward
+Kenya,Embu,Manyatta,Mbeti North,Ward
+Kenya,Embu,Manyatta,Kirimari,Ward
+Kenya,Embu,Manyatta,Gaturi South,Ward
+Kenya,Embu,Runyenjes,Gaturi North,Ward
+Kenya,Embu,Runyenjes,Central Ward,Ward
+Kenya,Kiambu,Ruiru,Kiuu,Ward
+Kenya,Kitui,Mwingi North,Ngomeni,Ward
+Kenya,Kitui,Mwingi North,Kyuso,Ward
+Kenya,Kiambu,Ruiru,Mwiki,Ward
+Kenya,Kiambu,Githunguri,Githunguri,Ward
+Kenya,Bomet,Sotik,Ndanai/Abosi,Ward
+Kenya,Bomet,Sotik,Chemagel,Ward
+Kenya,Bomet,Sotik,Kipsonoi,Ward
+Kenya,Bomet,Sotik,Kapletundo,Ward
+Kenya,Bomet,Sotik,Rongena/Manaret,Ward
+Kenya,Bomet,Chepalungu,Kong'Asis,Ward
+Kenya,Bomet,Chepalungu,Nyangores,Ward
+Kenya,Bomet,Chepalungu,Sigor,Ward
+Kenya,Bomet,Chepalungu,Chebunyo,Ward
+Kenya,Bomet,Chepalungu,Siongiroi,Ward
+Kenya,Bomet,Bomet East,Merigi,Ward
+Kenya,Bomet,Bomet East,Kembu,Ward
+Kenya,Bomet,Bomet East,Longisa,Ward
+Kenya,Bomet,Bomet East,Kipreres,Ward
+Kenya,Bomet,Bomet East,Chemaner,Ward
+Kenya,Bomet,Bomet Central,Silibwet Township,Ward
+Kenya,Bomet,Bomet Central,Ndaraweta,Ward
+Kenya,Bomet,Bomet Central,Singorwet,Ward
+Kenya,Bomet,Bomet Central,Chesoen,Ward
+Kenya,Bomet,Bomet Central,Mutarakwa,Ward
+Kenya,Bomet,Konoin,Chepchabas,Ward
+Kenya,Garissa,Ijara,Ijara,Ward
+Kenya,Mandera,Banissa,Guba,Ward
+Kenya,Mandera,Banissa,Malkamari,Ward
+Kenya,Tana River,Garsen,Kipini West,Ward
+Kenya,Tana River,Garsen,Garsen Central,Ward
+Kenya,Tana River,Garsen,Garsen West,Ward
+Kenya,Lamu,Lamu West,Mkunumbi,Ward
+Kenya,Lamu,Lamu West,Bahari,Ward
+Kenya,Mandera,Mandera West,Dandu,Ward
+Kenya,Mandera,Mandera West,Gither,Ward
+Kenya,Marsabit,North Horr,Turbi,Ward
+Kenya,Lamu,Lamu West,Witu,Ward
+Kenya,Marsabit,Laisamis,Kargi/South Horr,Ward
+Kenya,Marsabit,Laisamis,Korr/Ngurunit,Ward
+Kenya,Tana River,Garsen,Garsen North,Ward
+Kenya,Garissa,Garissa Township,Galbet,Ward
+Kenya,Wajir,Wajir East,Township,Ward
+Kenya,Wajir,Wajir West,Arbajahan,Ward
+Kenya,Wajir,Eldas,Lakoley South/Basir,Ward
+Kenya,Tharaka-Nithi,Maara,Ganga,Ward
+Kenya,Tharaka-Nithi,Maara,Chogoria,Ward
+Kenya,Tharaka-Nithi,Chuka/Igambang'Ombe,Mariani,Ward
+Kenya,Tharaka-Nithi,Chuka/Igambang'Ombe,Karingani,Ward
+Kenya,Tharaka-Nithi,Chuka/Igambang'Ombe,Magumoni,Ward
+Kenya,Embu,Runyenjes,Kyeni North,Ward
+Kenya,Embu,Runyenjes,Kyeni South,Ward
+Kenya,Embu,Mbeere South,Mwea,Ward
+Kenya,Embu,Mbeere South,Makima,Ward
+Kenya,Embu,Mbeere South,Mbeti South,Ward
+Kenya,Embu,Mbeere South,Mavuria,Ward
+Kenya,Embu,Mbeere South,Kiambere,Ward
+Kenya,Embu,Mbeere North,Nthawa,Ward
+Kenya,Kitui,Kitui Rural,Kisasi,Ward
+Kenya,Kitui,Kitui Central,Mulango,Ward
+Kenya,Kitui,Kitui Central,Kyangwithya East,Ward
+Kenya,Kitui,Kitui East,Chuluni,Ward
+Kenya,Kitui,Kitui South,Mutomo,Ward
+Kenya,Kitui,Kitui South,Mutha,Ward
+Kenya,Kitui,Kitui South,Kanziko,Ward
+Kenya,Nyandarua,Kinangop,Nyakio,Ward
+Kenya,Nyandarua,Kinangop,Githabai,Ward
+Kenya,Nyandarua,Kinangop,Magumu,Ward
+Kenya,Nyandarua,Kipipiri,Geta,Ward
+Kenya,Nyandarua,Ol Kalou,Karau,Ward
+Kenya,Nyandarua,Ol Kalou,Mirangine,Ward
+Kenya,Nyandarua,Ol Kalou,Kaimbaga,Ward
+Kenya,Nyandarua,Ol Jorok,Gathanji,Ward
+Kenya,Nyandarua,Ol Jorok,Gatimu,Ward
+Kenya,Nyandarua,Ol Jorok,Weru,Ward
+Kenya,Nyandarua,Ndaragwa,Central,Ward
+Kenya,Nyandarua,Ndaragwa,Shamata,Ward
+Kenya,Nyeri,Tetu,Wamagana,Ward
+Kenya,Nyeri,Tetu,Aguthi-Gaaki,Ward
+Kenya,Nyeri,Kieni,Mweiga,Ward
+Kenya,Nyeri,Kieni,Mwiyogo/Endarasha,Ward
+Kenya,Nyeri,Kieni,Mugunda,Ward
+Kenya,Nyeri,Kieni,Gatarakwa,Ward
+Kenya,Nyeri,Kieni,Thegu River,Ward
+Kenya,Nyeri,Kieni,Kabaru,Ward
+Kenya,Nyeri,Kieni,Gakawa,Ward
+Kenya,Nyeri,Mathira,Ruguru,Ward
+Kenya,Nyeri,Mathira,Magutu,Ward
+Kenya,Turkana,Turkana West,Kakuma,Ward
+Kenya,Turkana,Turkana West,Kalobeyei,Ward
+Kenya,Turkana,Turkana West,Nanaam,Ward
+Kenya,Turkana,Turkana Central,Lodwar Township,Ward
+Kenya,Turkana,Turkana Central,Kanamkemer,Ward
+Kenya,Turkana,Loima,Kotaruk/Lobei,Ward
+Kenya,Turkana,Loima,Loima,Ward
+Kenya,Turkana,Turkana South,Katilu,Ward
+Kenya,Turkana,Turkana East,Katilia,Ward
+Kenya,Turkana,Turkana East,Lokori/Kochodin,Ward
+Kenya,West Pokot,Kacheliba,Alale,Ward
+Kenya,West Pokot,Pokot South,Chepareria,Ward
+Kenya,West Pokot,Pokot South,Batei,Ward
+Kenya,West Pokot,Pokot South,Lelan,Ward
+Kenya,West Pokot,Pokot South,Tapach,Ward
+Kenya,Samburu,Samburu West,Lodokejek,Ward
+Kenya,Trans Nzoia,Kwanza,Bidii,Ward
+Kenya,Trans Nzoia,Saboti,Tuwani,Ward
+Kenya,Trans Nzoia,Saboti,Saboti,Ward
+Kenya,Trans Nzoia,Saboti,Machewa,Ward
+Kenya,Trans Nzoia,Kiminini,Hospital,Ward
+Kenya,Trans Nzoia,Kiminini,Sikhendu,Ward
+Kenya,Trans Nzoia,Cherangany,Sitatunga,Ward
+Kenya,Elgeyo-Marakwet,Marakwet West,Sengwer,Ward
+Kenya,Elgeyo-Marakwet,Marakwet West,Kapsowar,Ward
+Kenya,Elgeyo-Marakwet,Marakwet West,Arror,Ward
+Kenya,Elgeyo-Marakwet,Keiyo North,Kamariny,Ward
+Kenya,Elgeyo-Marakwet,Keiyo North,Emsoo,Ward
+Kenya,Elgeyo-Marakwet,Keiyo North,Tambach,Ward
+Kenya,Elgeyo-Marakwet,Keiyo North,Kapchemutwa,Ward
+Kenya,Elgeyo-Marakwet,Keiyo South,Kaptarakwa,Ward
+Kenya,Elgeyo-Marakwet,Keiyo South,Chepkorio,Ward
+Kenya,Elgeyo-Marakwet,Keiyo South,Metkei,Ward
+Kenya,Nandi,Tinderet,Songhor/Soba,Ward
+Kenya,Nandi,Tinderet,Chemelil/Chemase,Ward
+Kenya,Nandi,Tinderet,Kapsimotwo,Ward
+Kenya,Nandi,Nandi Hills,Ol'Lessos,Ward
+Kenya,Nandi,Nandi Hills,Kapchorua,Ward
+Kenya,Nandi,Chesumei,Kosirai,Ward
+Kenya,Nandi,Chesumei,Kaptel/Kamoiywo,Ward
+Kenya,Nandi,Emgwen,Kapkangani,Ward
+Kenya,Nandi,Mosop,Chepterwai,Ward
+Kenya,Nandi,Mosop,Kipkaren,Ward
+Kenya,Nandi,Mosop,Kurgung/Surungai,Ward
+Kenya,Nandi,Mosop,Kabiyet,Ward
+Kenya,Nandi,Mosop,Kabisaga,Ward
+Kenya,Laikipia,Laikipia West,Githiga,Ward
+Kenya,Kericho,Bureti,Kapkatet,Ward
+Kenya,Kericho,Belgut,Cheptororiet/Seretut,Ward
+Kenya,Wajir,Wajir West,Adamasajide,Ward
+Kenya,Samburu,Samburu North,Angata Nanyokie,Ward
+Kenya,Nairobi,Ruaraka,Baba Dogo,Ward
+Kenya,Wajir,Wajir East,Barwago,Ward
+Kenya,Kisii,Bobasi,Basi Bogetaorio,Ward
+Kenya,Kericho,Belgut,Kapsuser,Ward
+Kenya,Kisii,South Mugirango,Boikang'A,Ward
+Kenya,Kisii,Bomachoge Chache,Boochi/Tendere,Ward
+Kenya,Kisii,South Mugirango,Borabu / Chitago,Ward
+Kenya,Kisii,Bomachoge Chache,Bosoti/Sengera,Ward
+Kenya,Busia,Nambale,Bukhayo North/Waltsi,Ward
+Kenya,Migori,Kuria West,Bukira Centrl/Ikerege,Ward
+Kenya,Isiolo,Isiolo North,Bulla Pesa,Ward
+Kenya,Kakamega,Malava,Butali/Chegulo,Ward
+Kenya,Nandi,Chesumei,Chemundu/Kapng'Etuny,Ward
+Kenya,Elgeyo-Marakwet,Marakwet West,Cherang'Any/Chebororwa,Ward
+Kenya,Tharaka-Nithi,Tharaka,Chiakariga,Ward
+Kenya,Nyeri,Tetu,Dedan Kimanthi,Ward
+Kenya,Mandera,Mandera South,Elwak North,Ward
+Kenya,Elgeyo-Marakwet,Marakwet East,Embobut / Embulot,Ward
+Kenya,Kajiado,Kajiado South,Entonet/Lenkisim,Ward
+Kenya,Mombasa,Mvita,Shimanzi/Ganjoni,Ward
+Kenya,Wajir,Wajir West,Ganyure/Wagalla,Ward
+Kenya,Kiambu,Ruiru,Gatongora,Ward
+Kenya,Wajir,Wajir West,Hadado/Athibohol,Ward
+Kenya,Tharaka-Nithi,Chuka/Igambang'Ombe,Igambang'Ombe,Ward
+Kenya,Baringo,Baringo South,Ilchamus,Ward
+Kenya,Narok,Emurua Dikirr,Ilkerin,Ward
+Kenya,Narok,Narok West,Ilmotiok,Ward
+Kenya,Kajiado,Kajiado South,Mbirikani/Eselenkei,Ward
+Kenya,Kakamega,Navakholo,Ingostse-Mathia,Ward
+Kenya,Garissa,Balambala,Jara Jara,Ward
+Kenya,Embu,Runyenjes,Kagaari North,Ward
+Kenya,Embu,Runyenjes,Kagaari South,Ward
+Kenya,Kisumu,Nyando,Kabonyo/Kanyagwal,Ward
+Kenya,Homa Bay,Ndhiwa,Kabuoch North,Ward
+Kenya,Migori,Nyatike,Kachien'G,Ward
+Kenya,Kiambu,Ruiru,Kahawa Wendani,Ward
+Kenya,Kiambu,Ruiru,Kahawa Sukari,Ward
+Kenya,Bungoma,Mt. Elgon,Kapkateny,Ward
+Kenya,Homa Bay,Suba South,Kaksingri West,Ward
+Kenya,Makueni,Mbooni,Kalawa,Ward
+Kenya,Murang'a,Maragwa,Kamahuha,Ward
+Kenya,Nyamira,Kitutu Masaba,Kemera,Ward
+Kenya,Nandi,Aldai,Kaptumo-Kaboi,Ward
+Kenya,Kwale,Kinango,Kasemeni,Ward
+Kenya,Trans Nzoia,Kwanza,Keiyo,Ward
+Kenya,Meru,Central Imenti,Kiagu,Ward
+Kenya,Kiambu,Kiambu,Township,Ward
+Kenya,Meru,Igembe Central,Igembe East,Ward
+Kenya,Meru,Buuri,Kiirua/Naari,Ward
+Kenya,Mandera,Banissa,Kiliwehiri,Ward
+Kenya,Nandi,Chesumei,Kiptuya,Ward
+Kenya,Nyandarua,Ndaragwa,Kiriita,Ward
+Kenya,Makueni,Mbooni,Kiteta/Kisau,Ward
+Kenya,Mandera,Mandera South,Kutulo,Ward
+Kenya,Nandi,Aldai,Koyo-Ndurio,Ward
+Kenya,Kitui,Kitui West,Kwa Mutonga/Kithumula,Ward
+Kenya,Garissa,Dadaab,Labasigale,Ward
+Kenya,Wajir,Wajir South,Lagboghol South,Ward
+Kenya,Mandera,Mandera West,Lagsure,Ward
+Kenya,Turkana,Turkana North,Lake Zone,Ward
+Kenya,Nandi,Chesumei,Lelmokwo/Ngechek,Ward
+Kenya,Marsabit,Laisamis,Logo Logo,Ward
+Kenya,Baringo,Tiaty,Loiyamorock,Ward
+Kenya,Machakos,Kathiani,Lower Kaewa/Kaani,Ward
+Kenya,Nairobi,Embakasi East,Lower Savannah,Ward
+Kenya,Kakamega,Mumias East,Lusheya/Lubinu,Ward
+Kenya,Kwale,Kinango,Mackinnon Road,Ward
+Kenya,Nakuru,Naivasha,Maiella,Ward
+Kenya,Narok,Narok South,Majimoto/Naroosura,Ward
+Kenya,Mombasa,Mvita,Mji Wa Kale/Makadara,Ward
+Kenya,Machakos,Mwala,Makutano/ Mwala,Ward
+Kenya,Kakamega,Mumias East,Malaha/Isongo/Makunga,Ward
+Kenya,Machakos,Masinga,Ndithini,Ward
+Kenya,Kisumu,Kisumu East,Manyatta 'B',Ward
+Kenya,Kakamega,Butere,Marenyo - Shianda,Ward
+Kenya,Tharaka-Nithi,Tharaka,Marimanti,Ward
+Kenya,Mandera,Mandera North,Morothile,Ward
+Kenya,Machakos,Mavoko,Muthwani,Ward
+Kenya,Machakos,Kathiani,Mitaboni,Ward
+Kenya,Lamu,Lamu West,Mkomani,Ward
+Kenya,Elgeyo-Marakwet,Marakwet West,Moiben/Kuserwo,Ward
+Kenya,Migori,Kuria West,Makerero,Ward
+Kenya,Tharaka-Nithi,Chuka/Igambang'Ombe,Mugwe,Ward
+Kenya,Kisumu,Muhoroni,Muhoroni/Koru,Ward
+Kenya,Nakuru,Gilgil,Murindati,Ward
+Kenya,Tharaka-Nithi,Maara,Muthambi,Ward
+Kenya,Kitui,Kitui East,Mutito/Kaliku,Ward
+Kenya,Kitui,Kitui West,Mutonguni,Ward
+Kenya,Makueni,Makueni,Muvau/Kikuumini,Ward
+Kenya,Machakos,Machakos Town,Muvuti/Kiima-Kimwe,Ward
+Kenya,Meru,Central Imenti,Mwanganthia,Ward
+Kenya,Kiambu,Ruiru,Mwihoko,Ward
+Kenya,Nyeri,Kieni,Naromoru Kiamathaga,Ward
+Kenya,Nairobi,Mathare,Ngei,Ward
+Kenya,Nyandarua,Kinangop,Njabini\Kiburu,Ward
+Kenya,Kirinyaga,Gichugu,Njukiini,Ward
+Kenya,Migori,Uriri,North Kanyamkago,Ward
+Kenya,Kisumu,Kisumu West,Kisumu North,Ward
+Kenya,Kisumu,Kisumu East,Nyalenda 'A',Ward
+Kenya,Isiolo,Isiolo North,Oldo/Nyiro,Ward
+Kenya,Narok,Narok North,Olpusimoru,Ward
+Kenya,Kwale,Lungalunga,Pongwe/Kikoneni,Ward
+Kenya,Samburu,Samburu West,Poro,Ward
+Kenya,Mandera,Mandera North,Rhamu-Dimtu,Ward
+Kenya,West Pokot,Kapenguria,Riwo,Ward
+Kenya,Taita Taveta,Mwatate,Rong'E,Ward
+Kenya,Embu,Manyatta,Ruguru/Ngandori,Ward
+Kenya,Meru,Buuri,Ruiri/Rwarera,Ward
+Kenya,Homa Bay,Suba South,Ruma-Kaksingri,Ward
+Kenya,Nyeri,Nyeri Town,Ruring'U,Ward
+Kenya,Taita Taveta,Voi,Sagalla,Ward
+Kenya,Baringo,Baringo North,Saimo/Kipsaraman,Ward
+Kenya,Kisii,Bobasi,Sameta/Mokwerero,Ward
+Kenya,Nairobi,Kibra,Sarangombe,Ward
+Kenya,Uasin Gishu,Soy,Segero/Barsombe,Ward
+Kenya,Mandera,Mandera South,Shimbir Fatuma,Ward
+Kenya,Kisumu,Kisumu Central,Shaurimoyo Kaloleni,Ward
+Kenya,Kakamega,Navakholo,Shinoyi-Shikomari-Esumeyia,Ward
+Kenya,Kakamega,Malava,Shirugu-Mugai,Ward
+Kenya,Uasin Gishu,Kapseret,Simat/Kapseret,Ward
+Kenya,Machakos,Mavoko,Syokimau/Mulolongo,Ward
+Kenya,Kiambu,Thika Town,Township,Ward
+Kenya,Nandi,Tinderet,Tindiret,Ward
+Kenya,Uasin Gishu,Kesses,Tulwet/Chuiyat,Ward
+Kenya,Machakos,Kathiani,Upper Kaewa/Iveti,Ward
+Kenya,Nairobi,Embakasi East,Upper Savannah,Ward
+Kenya,Kwale,Matuga,Waa,Ward
+Kenya,Makueni,Mbooni,Waia-Kako,Ward
+Kenya,Homa Bay,Karachuonyo,Wangchieng,Ward
+Kenya,Mandera,Lafey,Waranqara,Ward
+Kenya,Migori,Suna West,Wasweta Ii,Ward
+Kenya,West Pokot,Sigor,Weiwei,Ward

@@ -3,6 +3,7 @@ from django.db import models
 class County(models.Model):
     name = models.CharField(max_length=100, unique=True)
     code = models.CharField(max_length=10, unique=True, null=True, blank=True)
+    country = models.CharField(max_length=100, default='Kenya')
 
     class Meta:
         verbose_name_plural = "Counties"

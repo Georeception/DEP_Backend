@@ -304,6 +304,7 @@ EMAIL_BACKEND = 'party.email_backend.BrevoEmailBackend'
 BREVO_API_KEY = os.getenv('BREVO_API_KEY')
 DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL')
 ADMIN_EMAIL = os.getenv('ADMIN_EMAIL')
+PAYSTACK_SECRET_KEY = os.getenv('PAYSTACK_SECRET_KEY')
 
 # For development/testing, you can use console backend instead:
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

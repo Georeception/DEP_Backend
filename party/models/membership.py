@@ -41,7 +41,8 @@ class Membership(models.Model):
         ('card', 'Credit/Debit Card'),
         ('bank', 'Bank Transfer'),
         ('paypal', 'PayPal'),
-        ('stripe', 'Stripe')
+        ('stripe', 'Stripe'),
+        ('paystack', 'Paystack'),
     ]
 
     MEMBERSHIP_AMOUNTS = {
@@ -56,6 +57,7 @@ class Membership(models.Model):
     membership_type = models.CharField(max_length=20, choices=MEMBERSHIP_TYPES)
     payment_status = models.CharField(max_length=20, choices=PAYMENT_STATUS, default='pending')
     payment_method = models.CharField(max_length=20, choices=PAYMENT_METHODS, null=True, blank=True)
+    transaction_id = models.CharField(max_length=100, unique=True, null=True, blank=True)
     amount = models.DecimalField(
         max_digits=10,
         decimal_places=2,

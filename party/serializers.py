@@ -258,11 +258,11 @@ class MembershipSerializer(serializers.ModelSerializer):
     class Meta:
         model = Membership
         fields = [
-            'id', 'membership_type', 'payment_status', 'payment_method', 'amount',
+            'id', 'membership_type', 'payment_status', 'payment_method', 'transaction_id', 'amount',
             'first_name', 'last_name', 'email', 'phone', 'county', 'constituency',
             'ward', 'age', 'gender', 'occupation', 'interests', 'created_at'
         ]
-        read_only_fields = ['payment_status', 'created_at']
+        read_only_fields = ['payment_status', 'payment_method', 'transaction_id', 'amount', 'created_at']
 
     def create(self, validated_data):
         request = self.context.get('request')
@@ -301,14 +301,14 @@ class ConstituencySerializer(serializers.ModelSerializer):
 class CountySerializer(serializers.ModelSerializer):
     class Meta:
         model = County
-        fields = ['id', 'name', 'code']
+        fields = ['id', 'name', 'code', 'country']
 
 class CountyDetailSerializer(serializers.ModelSerializer):
     constituencies = ConstituencySerializer(many=True, read_only=True)
     
     class Meta:
         model = County
-        fields = ['id', 'name', 'code', 'constituencies']
+        fields = ['id', 'name', 'code', 'country', 'constituencies']
 
 class PickupLocationSerializer(serializers.ModelSerializer):
     class Meta:
