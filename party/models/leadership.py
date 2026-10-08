@@ -1,6 +1,7 @@
 from django.db import models
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from froala_editor.fields import FroalaField
 from .user import User
 from cloudinary_storage.storage import MediaCloudinaryStorage
 import cloudinary.uploader
@@ -22,7 +23,7 @@ class NationalLeadership(models.Model):
     name = models.CharField(max_length=100)
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     position = models.ForeignKey(LeadershipPosition, on_delete=models.CASCADE)
-    bio = models.TextField()
+    bio = FroalaField()
     image = models.ImageField(
         upload_to='leadership/',
         storage=MediaCloudinaryStorage(),
