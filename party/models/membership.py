@@ -43,6 +43,12 @@ class Membership(models.Model):
         ('youth_pwd', 'Youth & people with disability'),
     ]
 
+    DEP_BUS_MEMBERSHIP_STATUSES = [
+        ('yes', 'Yes'),
+        ('no', 'No'),
+        ('not_sure', 'Not Sure'),
+    ]
+
     FREE_REGISTRATION_END = date(2026, 11, 30)
 
     PAYMENT_STATUS = [
@@ -105,11 +111,47 @@ class Membership(models.Model):
     # For non-logged in Mwananchi applications
     first_name = models.CharField(max_length=100, null=True, blank=True)
     last_name = models.CharField(max_length=100, null=True, blank=True)
+    full_name = models.CharField(max_length=200, blank=True, default='')
+    national_id_number = models.CharField(max_length=50, blank=True, default='')
+    date_of_birth = models.DateField(null=True, blank=True)
     email = models.EmailField(null=True, blank=True)
     phone = models.CharField(max_length=20, null=True, blank=True)
+    whatsapp_number = models.CharField(max_length=20, blank=True, default='')
+    sub_county = models.CharField(max_length=100, blank=True, default='')
+    postal_address = models.CharField(max_length=255, blank=True, default='')
     county = models.ForeignKey(County, on_delete=models.SET_NULL, null=True)
     constituency = models.ForeignKey(Constituency, on_delete=models.SET_NULL, null=True)
     ward = models.ForeignKey(Ward, on_delete=models.SET_NULL, null=True)
+    electoral_county = models.ForeignKey(
+        County,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='aspirant_memberships',
+    )
+    electoral_constituency = models.ForeignKey(
+        Constituency,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='aspirant_memberships',
+    )
+    electoral_ward = models.ForeignKey(
+        Ward,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='aspirant_memberships',
+    )
+    dep_bus_membership_status = models.CharField(
+        max_length=10,
+        choices=DEP_BUS_MEMBERSHIP_STATUSES,
+        blank=True,
+        default='',
+    )
+    membership_status_confirmed = models.BooleanField(null=True, blank=True)
+    membership_reference = models.CharField(max_length=100, blank=True, default='')
+    aspirant_details = models.JSONField(default=dict, blank=True)
     age = models.IntegerField(null=True, blank=True)
     gender = models.CharField(max_length=10, null=True, blank=True)
     occupation = models.CharField(max_length=100, null=True, blank=True)

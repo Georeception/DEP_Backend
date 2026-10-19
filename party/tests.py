@@ -130,6 +130,18 @@ class MembershipPaystackTests(TestCase):
         payload = {
             **self.payload['membership'],
             'membership_type': 'mca',
+            'membership_reference': 'DEP-TEST-001',
+            'dep_bus_membership_status': 'yes',
+            'membership_status_confirmed': True,
+            'electoral_county': self.county.id,
+            'electoral_constituency': self.constituency.id,
+            'electoral_ward': self.ward.id,
+            'full_name': 'Test Member',
+            'national_id_number': '12345678',
+            'date_of_birth': '1990-01-01',
+            'sub_county': 'Test Sub-County',
+            'whatsapp_number': '+254700000000',
+            'aspirant_details': {'motivation': 'Serve the community'},
         }
         response = self.client.post('/api/memberships/public/', payload, format='json')
 
@@ -143,6 +155,12 @@ class MembershipPaystackTests(TestCase):
         payload = {
             **self.payload['membership'],
             'membership_type': 'mca',
+            'membership_reference': 'DEP-TEST-001',
+            'dep_bus_membership_status': 'yes',
+            'membership_status_confirmed': True,
+            'electoral_county': self.county.id,
+            'electoral_constituency': self.constituency.id,
+            'electoral_ward': self.ward.id,
         }
         response = self.client.post('/api/memberships/public/', payload, format='json')
 
@@ -166,6 +184,12 @@ class MembershipPaystackTests(TestCase):
         self.payload['membership'].update({
             'membership_type': 'mca',
             'membership_category': 'youth_pwd',
+            'membership_reference': 'DEP-TEST-001',
+            'dep_bus_membership_status': 'yes',
+            'membership_status_confirmed': True,
+            'electoral_county': self.county.id,
+            'electoral_constituency': self.constituency.id,
+            'electoral_ward': self.ward.id,
         })
         mock_urlopen.return_value = BytesIO(json.dumps({
             'status': True,
@@ -187,3 +211,17 @@ class MembershipPaystackTests(TestCase):
         self.assertEqual(response.status_code, 201)
         self.assertEqual(response.data['membership_category'], 'youth_pwd')
         self.assertEqual(response.data['amount'], '2500.00')
+
+    @patch.object(Membership, 'is_free_registration_period', return_value=True)
+    def test_aspirant_application_requires_membership_reference(self, mock_free_period):
+        payload = {
+            **self.payload['membership'],
+            'membership_type': 'mca',
+            'dep_bus_membership_status': 'no',
+            'membership_status_confirmed': False,
+        }
+        response = self.client.post('/api/memberships/public/', payload, format='json')
+
+        self.assertEqual(response.status_code, 400)
+        self.assertIn('membership_reference', response.data)
+        self.assertEqual(Membership.objects.count(), 0)

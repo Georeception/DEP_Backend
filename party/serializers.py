@@ -259,8 +259,11 @@ class MembershipSerializer(serializers.ModelSerializer):
         model = Membership
         fields = [
             'id', 'membership_type', 'membership_category', 'payment_status', 'payment_method', 'transaction_id', 'amount',
-            'first_name', 'last_name', 'email', 'phone', 'county', 'constituency',
-            'ward', 'age', 'gender', 'occupation', 'interests', 'created_at'
+            'first_name', 'last_name', 'full_name', 'national_id_number', 'date_of_birth',
+            'email', 'phone', 'whatsapp_number', 'sub_county', 'postal_address', 'county', 'constituency',
+            'ward', 'electoral_county', 'electoral_constituency', 'electoral_ward',
+            'dep_bus_membership_status', 'membership_status_confirmed', 'membership_reference',
+            'aspirant_details', 'age', 'gender', 'occupation', 'interests', 'created_at'
         ]
         read_only_fields = ['payment_status', 'payment_method', 'transaction_id', 'amount', 'created_at']
 
@@ -275,6 +278,57 @@ class MembershipSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError({
                 'membership_category': 'This membership plan is not available in the selected category.'
             })
+        if membership_type in {
+            'mca', 'mp', 'women_rep', 'senator', 'governor',
+        }:
+            if not attrs.get('membership_reference', '').strip():
+                raise serializers.ValidationError({
+                    'membership_reference': 'A DEP-BUS membership number/reference is required for aspirant applications.'
+                })
+            if not attrs.get('dep_bus_membership_status'):
+                raise serializers.ValidationError({
+                    'dep_bus_membership_status': 'Please answer whether you are currently a DEP-BUS member.'
+                })
+            if attrs.get('membership_status_confirmed') is None:
+                raise serializers.ValidationError({
+                    'membership_status_confirmed': 'Please confirm whether you checked your membership using USSD *509#.'
+                })
+            if not isinstance(attrs.get('aspirant_details', {}), dict):
+                raise serializers.ValidationError({
+                    'aspirant_details': 'Aspirant application details must be an object.'
+                })
+            if not all(attrs.get(field) for field in ('county', 'constituency', 'ward')):
+                raise serializers.ValidationError({
+                    'ward': 'Select your county of residence, constituency and ward.'
+                })
+            if not all(attrs.get(field) for field in (
+                'electoral_county', 'electoral_constituency', 'electoral_ward',
+            )):
+                raise serializers.ValidationError({
+                    'electoral_ward': 'Select an electoral county, constituency and ward.'
+                })
+            county = attrs.get('county')
+            constituency = attrs.get('constituency')
+            ward = attrs.get('ward')
+            if constituency.county_id != county.id:
+                raise serializers.ValidationError({
+                    'constituency': 'Select a constituency in the selected county of residence.'
+                })
+            if ward.constituency_id != constituency.id:
+                raise serializers.ValidationError({
+                    'ward': 'Select a ward in the selected constituency of residence.'
+                })
+            electoral_county = attrs.get('electoral_county')
+            electoral_constituency = attrs.get('electoral_constituency')
+            electoral_ward = attrs.get('electoral_ward')
+            if electoral_county and electoral_constituency and electoral_constituency.county_id != electoral_county.id:
+                raise serializers.ValidationError({
+                    'electoral_constituency': 'Select a constituency in the selected electoral county.'
+                })
+            if electoral_constituency and electoral_ward and electoral_ward.constituency_id != electoral_constituency.id:
+                raise serializers.ValidationError({
+                    'electoral_ward': 'Select a ward in the selected electoral constituency.'
+                })
         return attrs
 
     def create(self, validated_data):
