@@ -258,28 +258,37 @@ class MembershipSerializer(serializers.ModelSerializer):
     class Meta:
         model = Membership
         fields = [
-            'id', 'membership_type', 'payment_status', 'payment_method', 'transaction_id', 'amount',
+            'id', 'membership_type', 'membership_category', 'payment_status', 'payment_method', 'transaction_id', 'amount',
             'first_name', 'last_name', 'email', 'phone', 'county', 'constituency',
             'ward', 'age', 'gender', 'occupation', 'interests', 'created_at'
         ]
         read_only_fields = ['payment_status', 'payment_method', 'transaction_id', 'amount', 'created_at']
 
+    def validate(self, attrs):
+        membership_type = attrs.get('membership_type')
+        membership_category = attrs.get('membership_category', 'general')
+        if membership_type == 'mwananchi' and membership_category != 'general':
+            raise serializers.ValidationError({
+                'membership_category': 'Mwananchi is only available under General membership.'
+            })
+        if Membership.get_amount(membership_type, membership_category) is None:
+            raise serializers.ValidationError({
+                'membership_category': 'This membership plan is not available in the selected category.'
+            })
+        return attrs
+
     def create(self, validated_data):
         request = self.context.get('request')
         if request and request.user.is_authenticated:
             validated_data['user'] = request.user
-        
-        # Set amount based on membership type
-        membership_amounts = {
-            'mwananchi': 0,
-            'bronze': 5000,
-            'silver': 10000,
-            'gold': 25000,
-            'platinum': 50000
-        }
+
         membership_type = validated_data.get('membership_type')
-        validated_data['amount'] = membership_amounts.get(membership_type, 0)
-        
+        membership_category = validated_data.get('membership_category', 'general')
+        validated_data.setdefault(
+            'amount',
+            Membership.get_amount(membership_type, membership_category),
+        )
+
         # For Mwananchi memberships, automatically set as completed
         if membership_type == 'mwananchi':
             validated_data['payment_status'] = 'completed'

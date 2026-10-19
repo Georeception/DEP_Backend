@@ -1,5 +1,6 @@
 import json
 import logging
+from decimal import Decimal
 from urllib.error import HTTPError, URLError
 from urllib.parse import quote
 from urllib.request import Request, urlopen
@@ -244,13 +245,18 @@ class MembershipViewSet(viewsets.ModelViewSet):
         serializer = self.get_serializer(data=request.data)
         if not serializer.is_valid():
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-        if serializer.validated_data.get('membership_type') != 'mwananchi':
+        membership_type = serializer.validated_data.get('membership_type')
+        if membership_type != 'mwananchi' and not Membership.is_free_registration_period():
             return Response(
-                {'detail': 'Paid memberships must be completed through Paystack checkout.'},
+                {'detail': 'Free registration has ended. Paid memberships must be completed through Paystack checkout.'},
                 status=status.HTTP_400_BAD_REQUEST,
             )
 
-        membership = serializer.save(payment_status='completed', payment_method=None)
+        membership = serializer.save(
+            payment_status='completed',
+            payment_method=None,
+            amount=Decimal('0.00'),
+        )
         return Response(self.get_serializer(membership).data, status=status.HTTP_201_CREATED)
 
     @action(
@@ -286,8 +292,14 @@ class MembershipViewSet(viewsets.ModelViewSet):
 
         validated_data = serializer.validated_data
         membership_type = validated_data.get('membership_type')
-        expected_amount = Membership.MEMBERSHIP_AMOUNTS.get(membership_type)
+        membership_category = validated_data.get('membership_category', 'general')
+        expected_amount = Membership.get_amount(membership_type, membership_category)
         email = validated_data.get('email')
+        if Membership.is_free_registration_period():
+            return Response(
+                {'detail': 'Registration is free until 30 November 2026. Submit a free membership application instead.'},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
         if not expected_amount or not email:
             return Response(
                 {'detail': 'A paid membership type and valid email are required.'},
@@ -301,6 +313,7 @@ class MembershipViewSet(viewsets.ModelViewSet):
                 existing_membership.email
                 and existing_membership.email.casefold() == email.casefold()
                 and existing_membership.membership_type == membership_type
+                and existing_membership.membership_category == membership_category
             ):
                 return Response(self.get_serializer(existing_membership).data)
             return Response(

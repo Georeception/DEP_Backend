@@ -1,6 +1,9 @@
+from datetime import date
+from decimal import Decimal
+
 from django.db import models
 from django.core.validators import MinValueValidator
-from decimal import Decimal
+from django.utils import timezone
 from .user import User
 from .locations import County, Constituency, Ward
 
@@ -23,11 +26,24 @@ class MembershipPlan(models.Model):
 class Membership(models.Model):
     MEMBERSHIP_TYPES = [
         ('mwananchi', 'Mwananchi'),
+        ('mca', 'MCA'),
+        ('mp', 'MP'),
+        ('women_rep', 'Women Rep'),
+        ('senator', 'Senator'),
+        ('governor', 'Governor'),
+        # Keep existing values valid for historical membership records.
         ('bronze', 'Bronze'),
         ('silver', 'Silver'),
         ('gold', 'Gold'),
         ('platinum', 'Platinum')
     ]
+
+    MEMBERSHIP_CATEGORIES = [
+        ('general', 'General'),
+        ('youth_pwd', 'Youth & people with disability'),
+    ]
+
+    FREE_REGISTRATION_END = date(2026, 11, 30)
 
     PAYMENT_STATUS = [
         ('pending', 'Pending'),
@@ -47,10 +63,24 @@ class Membership(models.Model):
 
     MEMBERSHIP_AMOUNTS = {
         'mwananchi': Decimal('0.00'),
+        'mca': Decimal('5000.00'),
+        'mp': Decimal('10000.00'),
+        'women_rep': Decimal('10000.00'),
+        'senator': Decimal('10000.00'),
+        'governor': Decimal('50000.00'),
+        # Retain the original rates for existing integrations and records.
         'bronze': Decimal('5000.00'),
         'silver': Decimal('10000.00'),
         'gold': Decimal('25000.00'),
         'platinum': Decimal('50000.00')
+    }
+
+    YOUTH_PWD_MEMBERSHIP_AMOUNTS = {
+        'mca': Decimal('2500.00'),
+        'mp': Decimal('5000.00'),
+        'women_rep': Decimal('5000.00'),
+        'senator': Decimal('5000.00'),
+        'governor': Decimal('25000.00'),
     }
 
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
@@ -58,6 +88,11 @@ class Membership(models.Model):
     payment_status = models.CharField(max_length=20, choices=PAYMENT_STATUS, default='pending')
     payment_method = models.CharField(max_length=20, choices=PAYMENT_METHODS, null=True, blank=True)
     transaction_id = models.CharField(max_length=100, unique=True, null=True, blank=True)
+    membership_category = models.CharField(
+        max_length=20,
+        choices=MEMBERSHIP_CATEGORIES,
+        default='general',
+    )
     amount = models.DecimalField(
         max_digits=10,
         decimal_places=2,
@@ -80,10 +115,21 @@ class Membership(models.Model):
     occupation = models.CharField(max_length=100, null=True, blank=True)
     interests = models.TextField(null=True, blank=True)
 
+    @classmethod
+    def get_amount(cls, membership_type, membership_category='general'):
+        if membership_category == 'youth_pwd':
+            return cls.YOUTH_PWD_MEMBERSHIP_AMOUNTS.get(membership_type)
+        return cls.MEMBERSHIP_AMOUNTS.get(membership_type)
+
+    @classmethod
+    def is_free_registration_period(cls):
+        return timezone.localdate() <= cls.FREE_REGISTRATION_END
+
     def save(self, *args, **kwargs):
-        # Set amount based on membership type if not already set
-        if not self.amount or self.amount == Decimal('0.00'):
-            self.amount = self.MEMBERSHIP_AMOUNTS.get(self.membership_type, Decimal('0.00'))
+        if self.amount == Decimal('0.00') and not (
+            self.payment_status == 'completed' and self.payment_method is None
+        ):
+            self.amount = self.get_amount(self.membership_type, self.membership_category) or Decimal('0.00')
         super().save(*args, **kwargs)
 
     def __str__(self):

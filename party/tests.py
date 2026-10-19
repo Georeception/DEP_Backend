@@ -34,7 +34,8 @@ class MembershipPaystackTests(TestCase):
 
     @override_settings(PAYSTACK_SECRET_KEY='test-secret')
     @patch('party.views.views.urlopen')
-    def test_verified_paystack_payment_creates_completed_guest_membership(self, mock_urlopen):
+    @patch.object(Membership, 'is_free_registration_period', return_value=False)
+    def test_verified_paystack_payment_creates_completed_guest_membership(self, mock_free_period, mock_urlopen):
         mock_urlopen.return_value = BytesIO(json.dumps({
             'status': True,
             'data': {
@@ -61,7 +62,8 @@ class MembershipPaystackTests(TestCase):
 
     @override_settings(PAYSTACK_SECRET_KEY='test-secret')
     @patch('party.views.views.urlopen')
-    def test_repeating_verified_reference_does_not_create_duplicate_membership(self, mock_urlopen):
+    @patch.object(Membership, 'is_free_registration_period', return_value=False)
+    def test_repeating_verified_reference_does_not_create_duplicate_membership(self, mock_free_period, mock_urlopen):
         mock_urlopen.return_value = BytesIO(json.dumps({
             'status': True,
             'data': {
@@ -90,7 +92,8 @@ class MembershipPaystackTests(TestCase):
 
     @override_settings(PAYSTACK_SECRET_KEY='test-secret')
     @patch('party.views.views.urlopen')
-    def test_payment_with_wrong_amount_does_not_create_membership(self, mock_urlopen):
+    @patch.object(Membership, 'is_free_registration_period', return_value=False)
+    def test_payment_with_wrong_amount_does_not_create_membership(self, mock_free_period, mock_urlopen):
         mock_urlopen.return_value = BytesIO(json.dumps({
             'status': True,
             'data': {
@@ -122,7 +125,30 @@ class MembershipPaystackTests(TestCase):
         self.assertEqual(response.status_code, 503)
         self.assertEqual(Membership.objects.count(), 0)
 
-    def test_public_membership_endpoint_only_accepts_free_plan(self):
+    @patch.object(Membership, 'is_free_registration_period', return_value=True)
+    def test_paid_plan_registration_is_free_before_deadline(self, mock_free_period):
+        payload = {
+            **self.payload['membership'],
+            'membership_type': 'mca',
+        }
+        response = self.client.post('/api/memberships/public/', payload, format='json')
+
+        self.assertEqual(response.status_code, 201)
+        self.assertEqual(response.data['payment_status'], 'completed')
+        self.assertEqual(response.data['amount'], '0.00')
+        self.assertEqual(Membership.objects.count(), 1)
+
+    @patch.object(Membership, 'is_free_registration_period', return_value=False)
+    def test_public_endpoint_rejects_paid_plan_after_deadline_but_keeps_mwananchi_free(self, mock_free_period):
+        payload = {
+            **self.payload['membership'],
+            'membership_type': 'mca',
+        }
+        response = self.client.post('/api/memberships/public/', payload, format='json')
+
+        self.assertEqual(response.status_code, 400)
+        self.assertEqual(Membership.objects.count(), 0)
+
         payload = {
             **self.payload['membership'],
             'membership_type': 'mwananchi',
@@ -133,7 +159,31 @@ class MembershipPaystackTests(TestCase):
         self.assertEqual(response.data['payment_status'], 'completed')
         self.assertEqual(Membership.objects.count(), 1)
 
-        payload['membership_type'] = 'bronze'
-        response = self.client.post('/api/memberships/public/', payload, format='json')
-        self.assertEqual(response.status_code, 400)
-        self.assertEqual(Membership.objects.count(), 1)
+    @override_settings(PAYSTACK_SECRET_KEY='test-secret')
+    @patch('party.views.views.urlopen')
+    @patch.object(Membership, 'is_free_registration_period', return_value=False)
+    def test_youth_pwd_rate_is_verified_and_saved(self, mock_free_period, mock_urlopen):
+        self.payload['membership'].update({
+            'membership_type': 'mca',
+            'membership_category': 'youth_pwd',
+        })
+        mock_urlopen.return_value = BytesIO(json.dumps({
+            'status': True,
+            'data': {
+                'status': 'success',
+                'reference': 'paystack-test-reference',
+                'currency': 'KES',
+                'amount': 250000,
+                'customer': {'email': 'member@example.com'},
+            },
+        }).encode())
+
+        response = self.client.post(
+            '/api/memberships/verify-payment/',
+            self.payload,
+            format='json',
+        )
+
+        self.assertEqual(response.status_code, 201)
+        self.assertEqual(response.data['membership_category'], 'youth_pwd')
+        self.assertEqual(response.data['amount'], '2500.00')
