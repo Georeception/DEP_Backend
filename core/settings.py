@@ -17,6 +17,7 @@ from dotenv import load_dotenv
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
+import dj_database_url
 
 # Load environment variables
 load_dotenv()
@@ -97,16 +98,61 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('DB_NAME'),
-        'USER': os.getenv('DB_USER'),
-        'PASSWORD': os.getenv('DB_PASSWORD'),
-        'HOST': os.getenv('DB_HOST'),
-        'PORT': os.getenv('DB_PORT'),
+# Use DATABASE_URL environment variable for connection pooling and SSL
+DATABASE_URL = os.getenv('DATABASE_URL')
+
+if DATABASE_URL:
+    DATABASES = {
+        'default': dj_database_url.config(
+            default=DATABASE_URL,
+            conn_max_age=600,
+            conn_health_checks=True,
+            ssl_require=True,
+        )
     }
-}
+else:
+    # Fallback to individual environment variables for local development
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': os.getenv('DB_NAME'),
+            'USER': os.getenv('DB_USER'),
+            'PASSWORD': os.getenv('DB_PASSWORD'),
+            'HOST': os.getenv('DB_HOST'),
+            'PORT': os.getenv('DB_PORT'),
+        }
+    }
+
+# Caching Configuration
+# https://docs.djangoproject.com/en/5.2/topics/cache/
+
+REDIS_URL = os.getenv('REDIS_URL')
+
+if REDIS_URL:
+    # Use Redis for caching in production
+    CACHES = {
+        'default': {
+            'BACKEND': 'django_redis.cache.RedisCache',
+            'LOCATION': REDIS_URL,
+            'OPTIONS': {
+                'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+                'CONNECTION_POOL_KWARGS': {
+                    'retry_on_timeout': True,
+                },
+            },
+            'KEY_PREFIX': 'dep_party',
+            'TIMEOUT': 300,  # 5 minutes default
+        }
+    }
+else:
+    # Fallback to local memory cache for local development
+    CACHES = {
+        'default': {
+            'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+            'KEY_PREFIX': 'dep_party',
+            'TIMEOUT': 300,
+        }
+    }
 
 
 # Password validation
@@ -236,6 +282,8 @@ CORS_PREFLIGHT_MAX_AGE = 86400  # 24 hours
 
 # Security Settings
 if not DEBUG:
+    # Trust Cloudflare's SSL termination
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     SECURE_SSL_REDIRECT = True
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
