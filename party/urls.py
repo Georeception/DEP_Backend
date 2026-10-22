@@ -24,7 +24,8 @@ from .views import (
     MembershipViewSet,
     CountyViewSet,
     ConstituencyViewSet,
-    WardViewSet
+    WardViewSet,
+    FileUploadView
 )
 from .views.shop import PickupLocationViewSet
 from .views.newsletter import subscribe, verify_subscription, unsubscribe
@@ -62,6 +63,7 @@ urlpatterns = [
     path('auth/login/', LoginView.as_view(), name='login'),
     path('auth/logout/', LogoutView.as_view(), name='logout'),
     path('auth/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('api/upload_file/', FileUploadView.as_view(), name='upload_file'),
     path('api/newsletter/subscribe/', subscribe, name='newsletter_subscribe'),
     path('api/newsletter/verify/<str:token>/', verify_subscription, name='newsletter_verify'),
     path('api/newsletter/unsubscribe/', unsubscribe, name='newsletter_unsubscribe'),

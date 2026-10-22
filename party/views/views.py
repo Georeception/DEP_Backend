@@ -16,6 +16,8 @@ from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework_simplejwt.views import TokenRefreshView
 from django.contrib.auth import get_user_model, authenticate
 from django.utils import timezone
+import cloudinary
+import cloudinary.uploader
 from ..models import (
     User, News, NewsCategory, Event, EventCategory, EventRegistration, Gallery, GalleryCategory,
     NationalLeadership, LeadershipPosition, Donation, Product, ProductCategory, Order, OrderItem,
@@ -436,4 +438,79 @@ class WardViewSet(viewsets.ReadOnlyModelViewSet):
         constituency_id = self.request.query_params.get('constituency', None)
         if constituency_id:
             return self.queryset.filter(constituency_id=constituency_id)
-        return self.queryset 
+        return self.queryset
+
+# File Upload View for Cloudinary
+class FileUploadView(APIView):
+    """
+    Upload files to Cloudinary for membership registration attachments.
+    Accepts: ID document, passport photo, membership proof, certificates, etc.
+    """
+    permission_classes = [permissions.AllowAny]
+
+    def post(self, request):
+        """
+        Upload a file to Cloudinary and return the URL.
+        """
+        if 'file' not in request.FILES:
+            return Response(
+                {'error': 'No file provided'},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+        file = request.FILES['file']
+        file_type = request.data.get('type', 'document')  # document, photo, certificate, etc.
+
+        # Validate file size (max 10MB)
+        max_size = 10 * 1024 * 1024  # 10MB
+        if file.size > max_size:
+            return Response(
+                {'error': 'File size exceeds 10MB limit'},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+        # Determine folder based on file type
+        folder_map = {
+            'id_document': 'membership/id_documents',
+            'passport_photo': 'membership/passport_photos',
+            'membership_proof': 'membership/membership_proofs',
+            'academic_certificate': 'membership/academic_certificates',
+            'leadership_document': 'membership/leadership_documents',
+            'other_document': 'membership/other_documents',
+        }
+        folder = folder_map.get(file_type, 'membership/documents')
+
+        try:
+            # Upload to Cloudinary
+            upload_options = {
+                'folder': folder,
+                'resource_type': 'auto',  # Auto-detect image or document
+                'use_filename': True,
+                'unique_filename': True,
+                'overwrite': False,
+            }
+
+            # For images, add optimization
+            if file.content_type and file.content_type.startswith('image/'):
+                upload_options.update({
+                    'transformation': [
+                        {'quality': 'auto', 'fetch_format': 'auto'},
+                    ]
+                })
+
+            result = cloudinary.uploader.upload(file, **upload_options)
+
+            return Response({
+                'url': result['secure_url'],
+                'public_id': result['public_id'],
+                'resource_type': result['resource_type'],
+                'format': result['format'],
+                'bytes': result['bytes'],
+            }, status=status.HTTP_201_CREATED)
+
+        except Exception as e:
+            logger.error(f"Error uploading file to Cloudinary: {str(e)}")
+            return Response(
+                {'error': f'Failed to upload file: {str(e)}'},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            ) 

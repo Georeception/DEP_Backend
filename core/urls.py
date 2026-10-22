@@ -28,7 +28,7 @@ from party.views.views import (
     DonationViewSet, ProductViewSet, ProductCategoryViewSet,
     OrderViewSet, OrderItemViewSet, MembershipPlanViewSet,
     MembershipViewSet, UserViewSet, CountyViewSet,
-    ConstituencyViewSet, WardViewSet
+    ConstituencyViewSet, WardViewSet, FileUploadView
 )
 from party.views.shop import PickupLocationViewSet
 from party.views.newsletter import subscribe, verify_subscription, unsubscribe
@@ -64,6 +64,7 @@ urlpatterns = [
     path('api/auth/login/', LoginView.as_view(), name='auth-login'),
     path('api/auth/logout/', LogoutView.as_view(), name='auth-logout'),
     path('api/auth/user/', UserDetailView.as_view(), name='auth-user-detail'),
+    path('api/upload_file/', FileUploadView.as_view(), name='upload_file'),
     path('api/newsletter/subscribe/', subscribe, name='newsletter-subscribe'),
     path('api/newsletter/verify/<str:token>/', verify_subscription, name='newsletter-verify'),
     path('api/newsletter/unsubscribe/', unsubscribe, name='newsletter-unsubscribe'),

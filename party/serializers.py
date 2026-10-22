@@ -254,7 +254,23 @@ class MembershipPlanSerializer(serializers.ModelSerializer):
         model = MembershipPlan
         fields = '__all__'
 
+
+class RelatedNameField(serializers.PrimaryKeyRelatedField):
+    def use_pk_only_optimization(self):
+        return False
+
+    def to_representation(self, value):
+        return value.name
+
+
 class MembershipSerializer(serializers.ModelSerializer):
+    county = RelatedNameField(queryset=County.objects.all(), required=False, allow_null=True)
+    constituency = RelatedNameField(queryset=Constituency.objects.all(), required=False, allow_null=True)
+    ward = RelatedNameField(queryset=Ward.objects.all(), required=False, allow_null=True)
+    electoral_county = RelatedNameField(queryset=County.objects.all(), required=False, allow_null=True)
+    electoral_constituency = RelatedNameField(queryset=Constituency.objects.all(), required=False, allow_null=True)
+    electoral_ward = RelatedNameField(queryset=Ward.objects.all(), required=False, allow_null=True)
+
     class Meta:
         model = Membership
         fields = [
@@ -263,7 +279,31 @@ class MembershipSerializer(serializers.ModelSerializer):
             'email', 'phone', 'whatsapp_number', 'sub_county', 'postal_address', 'county', 'constituency',
             'ward', 'electoral_county', 'electoral_constituency', 'electoral_ward',
             'dep_bus_membership_status', 'membership_status_confirmed', 'membership_reference',
-            'aspirant_details', 'age', 'gender', 'occupation', 'interests', 'created_at'
+            'aspirant_details', 'age', 'gender', 'occupation', 'interests',
+            # Section E: Special Category
+            'special_category', 'disability_nature',
+            # Section F: Education, Profession & Experience
+            'education_level', 'professional_qualifications', 'current_occupation',
+            'current_employer', 'professional_experience',
+            # Section G: Leadership & Community Engagement
+            'previous_leadership_position', 'previous_leadership_details',
+            'organizations_participated', 'community_contribution',
+            # Section H: Motivation for DEP-BUS Ticket
+            'motivation_reason', 'key_issues', 'devolution_understanding', 'contribution_to_party',
+            # Section I: Political & Electoral Information
+            'contested_before', 'contested_details', 'current_public_office',
+            'current_office_details', 'bankruptcy_proceedings', 'bankruptcy_details',
+            'criminal_proceedings', 'criminal_proceedings_details',
+            # Section J: Campaign & Organisational Capacity
+            'support_network', 'volunteer_count', 'campaign_structure', 'grassroots_strategy',
+            # Section K: Commitment to DEP-BUS
+            'uphold_values', 'peaceful_politics', 'issue_based_politics', 'abide_nomination',
+            # Section M: Document Attachments
+            'id_document', 'passport_photo', 'membership_proof', 'academic_certificates',
+            'leadership_documents', 'other_documents',
+            # Admin Status Fields
+            'application_status', 'membership_status_verified', 'documents_verified', 'admin_remarks',
+            'created_at'
         ]
         read_only_fields = ['payment_status', 'payment_method', 'transaction_id', 'amount', 'created_at']
 

@@ -148,6 +148,12 @@ class MembershipPaystackTests(TestCase):
         self.assertEqual(response.status_code, 201)
         self.assertEqual(response.data['payment_status'], 'completed')
         self.assertEqual(response.data['amount'], '0.00')
+        self.assertEqual(response.data['county'], 'Test County')
+        self.assertEqual(response.data['constituency'], 'Test Constituency')
+        self.assertEqual(response.data['ward'], 'Test Ward')
+        self.assertEqual(response.data['electoral_county'], 'Test County')
+        self.assertEqual(response.data['electoral_constituency'], 'Test Constituency')
+        self.assertEqual(response.data['electoral_ward'], 'Test Ward')
         self.assertEqual(Membership.objects.count(), 1)
 
     @patch.object(Membership, 'is_free_registration_period', return_value=False)
